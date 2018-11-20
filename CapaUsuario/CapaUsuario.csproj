@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Resources\Block Berthold BQ Regular.otf" />
+    <None Include="Resources\Insanibc.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
@@ -55,8 +57,86 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Content Include="Resources\500.png" />
+    <Content Include="Resources\5001.png" />
+    <Content Include="Resources\5002.png" />
+    <Content Include="Resources\500x540_cucuruchones.png" />
+    <Content Include="Resources\500x540_king-mix.png" />
+    <Content Include="Resources\5842996fa6515b1e0ad75add.ico" />
+    <Content Include="Resources\ACEPTAR.png" />
+    <Content Include="Resources\AGREGAR.png" />
+    <Content Include="Resources\AGREGARB.png" />
+    <Content Include="Resources\AGREGARC.png" />
+    <Content Include="Resources\AGREGARH.png" />
+    <Content Include="Resources\atomic-grande.png" />
+    <Content Include="Resources\BIG-KING-500X540-A-LA-PARRILLA.png" />
+    <Content Include="Resources\BK_Web_AROS_CEBOLLA_500X540px.png" />
+    <Content Include="Resources\BK_Web_BIG_KING_POLLO_500X540px.png" />
+    <Content Include="Resources\BK_Web_BK_ENSALADA_CAESAR_500X540px.png" />
+    <Content Include="Resources\BK_Web_BK_ENSALADA_GOURMET_500X540px.png" />
+    <Content Include="Resources\BK_Web_BK_NUGGETS_500X540px.png" />
+    <Content Include="Resources\BK_Web_BK_SNACKS_500X540px_3.png" />
+    <Content Include="Resources\BK_Web_BK_SOJA_BIO_500X540px.png" />
+    <Content Include="Resources\BK_Web_BK_STACKER_CUADRUPLE_500X540px_0.png" />
+    <Content Include="Resources\BK_Web_BK_STACKER_TRIPLE_500X540px_0 %281%29.png" />
+    <Content Include="Resources\BK_Web_BK_STACKER_TRIPLE_500X540px_0.png" />
+    <Content Include="Resources\BK_Web_CAJA_KING.JR_300x270px.jpg" />
+    <Content Include="Resources\BK_Web_CAJA_KING.png" />
+    <Content Include="Resources\BK_Web_CHURRASQUITO_PAMPEANO_500X540px.png" />
+    <Content Include="Resources\BK_Web_CHURRASQUITO_TRADICIONAL_500X540px.png" />
+    <Content Include="Resources\BK_Web_CONOS_RELLENOS_500X540px_0.png" />
+    <Content Include="Resources\BK_Web_CONO_500X540px.png" />
+    <Content Include="Resources\BK_Web_GASEOSA_500X540px.png" />
+    <Content Include="Resources\BK_Web_HAMBURGUESA-CON-QUESO-corregida_500X540px_0_0.png" />
+    <Content Include="Resources\BK_Web_HAMBURGUESA-corregida_500X540px_0_0_0.png" />
+    <Content Include="Resources\BK_Web_JUGO_TROPICANA_500X540px.png" />
+    <Content Include="Resources\BK_Web_KING_DE_POLLO_500X540px.png" />
+    <Content Include="Resources\BK_Web_KING_DE_POLLO_FRANCES_500X540px.png" />
+    <Content Include="Resources\BK_Web_NAPOLITANO_500X540px_0.png" />
+    <Content Include="Resources\BK_Web_PAPAS_FRITAS_500X540px.png" />
+    <Content Include="Resources\BK_Web_SUNDAE_500X540px.png" />
+    <Content Include="Resources\BK_Web_TOMATITOS_500X540px.png" />
+    <Content Include="Resources\BK_Web_WhopperJr_500x540.png" />
+    <Content Include="Resources\BOTON-IMPORTANTE.png" />
+    <Content Include="Resources\BOTON-IMPORTANTE1.png" />
+    <Content Include="Resources\Burger_King_logo_1999.png" />
+    <Content Include="Resources\Burger_King_logo_19991.png" />
+    <Content Include="Resources\caca.png" />
+    <Content Include="Resources\CANCELAR.png" />
+    <Content Include="Resources\cobranza.png" />
+    <Content Include="Resources\COBRAR.png" />
+    <Content Include="Resources\CONFIRMAR.png" />
+    <Content Include="Resources\contraseña.png" />
+    <Content Include="Resources\CRUZ.png" />
+    <Content Include="Resources\download.png" />
+    <Content Include="Resources\EFECTIVO.png" />
+    <Content Include="Resources\ELIMINAR.png" />
+    <Content Include="Resources\ENTRAR.png" />
+    <Content Include="Resources\ENVIAR.png" />
+    <Content Include="Resources\extra-high_0.png" />
+    <Content Include="Resources\extra-high_01.png" />
+    <Content Include="Resources\FLECHA.png" />
+    <Content Include="Resources\FORMGERENTE.png" />
+    <Content Include="Resources\HAMBMASVEND.png" />
+    <Content Include="Resources\LIMPIAR.png" />
+    <Content Include="Resources\login 1.png" />
+    <Content Include="Resources\login 2.png" />
+    <Content Include="Resources\login 21.png" />
+    <Content Include="Resources\LOGIN.png" />
+    <Content Include="Resources\Long-Rodeo-BBQ540.png" />
+    <Content Include="Resources\Long-Rodeo-BBQ5401.png" />
+    <Content Include="Resources\Long540.png" />
+    <Content Include="Resources\MAYORVENTA.png" />
+    <Content Include="Resources\METPAGO.png" />
+    <Content Include="Resources\modificar.png" />
+    <Content Include="Resources\pass.png" />
+    <Content Include="Resources\TARJETA.png" />
+    <Content Include="Resources\TIPO.png" />
+    <Content Include="Resources\Usuario.png" />
+    <Content Include="Resources\whopper.png" />
+    <Content Include="Resources\whopper_extreme-high.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
