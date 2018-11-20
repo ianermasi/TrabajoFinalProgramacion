@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B5C27528-35C0-4F0D-ABF6-BB8D5A3DAC35}</ProjectGuid>
+    <ProjectGuid>{A0679E30-2D1B-4A62-B05A-3B8387E061DE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CapaUsuario</RootNamespace>
-    <AssemblyName>CapaUsuario</AssemblyName>
+    <RootNamespace>CapaDato</RootNamespace>
+    <AssemblyName>CapaDato</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,15 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
-      <Project>{9c609c26-8310-4f04-b59e-1cba51aa939a}</Project>
-      <Name>CapaNegocio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
