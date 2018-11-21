@@ -49,6 +49,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
