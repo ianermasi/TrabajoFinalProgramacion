@@ -47,11 +47,10 @@ namespace CapaUsuario
 
         private void PNLImagen1_MouseClick(object sender, MouseEventArgs e)
         {
-            
-            foreach(object x in PNLProductosCombos.Controls)
+            foreach (object x in PNLProductosCombos.Controls)
             {
-                if(x is Panel)
-                (x as Panel).BackColor = Color.White;
+                if (x is Panel)
+                    (x as Panel).BackColor = Color.White;
             }
             (sender as Panel).BackColor = Color.LightBlue;
             string[] nombre = null;
@@ -59,11 +58,11 @@ namespace CapaUsuario
             {
                 nombre = (sender as Panel).Name.Split('_');
             }
-            catch (Exception ex) { MessageBox.Show("Error" + ex); }
+            catch { MessageBox.Show("hla"); }
 
             foreach (string x in nombre)
             {
-                LBLNombre.Text = LBLNombre.Text + " " + x;
+                LBLNombre.Text = LBLNombre.Text + "" + x;
             }
         }
     }
