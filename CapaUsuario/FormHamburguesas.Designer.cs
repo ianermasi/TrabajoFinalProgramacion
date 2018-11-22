@@ -96,11 +96,11 @@
             // 
             // LBLNombre
             // 
-            this.LBLNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LBLNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LBLNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLNombre.Location = new System.Drawing.Point(5, 368);
+            this.LBLNombre.Location = new System.Drawing.Point(3, 391);
             this.LBLNombre.Name = "LBLNombre";
-            this.LBLNombre.Size = new System.Drawing.Size(490, 61);
+            this.LBLNombre.Size = new System.Drawing.Size(335, 38);
             this.LBLNombre.TabIndex = 38;
             this.LBLNombre.Text = "Seleccione una hamburguesa";
             // 

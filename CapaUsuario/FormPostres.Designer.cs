@@ -42,13 +42,13 @@
             this.RBTNMixto = new System.Windows.Forms.RadioButton();
             this.RBTNDulceDeLeche = new System.Windows.Forms.RadioButton();
             this.PNLContenedor = new System.Windows.Forms.Panel();
-            this.IMLPostres = new System.Windows.Forms.ImageList(this.components);
-            this.Cucuruchones = new System.Windows.Forms.Panel();
-            this.King_Mix = new System.Windows.Forms.Panel();
-            this.Cono = new System.Windows.Forms.Panel();
-            this.Cono_Relleno = new System.Windows.Forms.Panel();
-            this.Sundae = new System.Windows.Forms.Panel();
             this.LBLNombre = new System.Windows.Forms.Label();
+            this.Sundae = new System.Windows.Forms.Panel();
+            this.Cono_Relleno = new System.Windows.Forms.Panel();
+            this.Cono = new System.Windows.Forms.Panel();
+            this.King_Mix = new System.Windows.Forms.Panel();
+            this.Cucuruchones = new System.Windows.Forms.Panel();
+            this.IMLPostres = new System.Windows.Forms.ImageList(this.components);
             this.PNLOpciones.SuspendLayout();
             this.PNLContSalsa.SuspendLayout();
             this.PNLContHelado.SuspendLayout();
@@ -218,51 +218,15 @@
             this.PNLContenedor.Size = new System.Drawing.Size(830, 203);
             this.PNLContenedor.TabIndex = 7;
             // 
-            // IMLPostres
+            // LBLNombre
             // 
-            this.IMLPostres.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("IMLPostres.ImageStream")));
-            this.IMLPostres.TransparentColor = System.Drawing.Color.Transparent;
-            this.IMLPostres.Images.SetKeyName(0, "500x540_cucuruchones.png");
-            this.IMLPostres.Images.SetKeyName(1, "500x540_king-mix.png");
-            this.IMLPostres.Images.SetKeyName(2, "BK_Web_CONO_500X540px.png");
-            this.IMLPostres.Images.SetKeyName(3, "BK_Web_CONOS_RELLENOS_500X540px_0.png");
-            this.IMLPostres.Images.SetKeyName(4, "BK_Web_SUNDAE_500X540px.png");
-            // 
-            // Cucuruchones
-            // 
-            this.Cucuruchones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cucuruchones.Location = new System.Drawing.Point(10, 8);
-            this.Cucuruchones.Name = "Cucuruchones";
-            this.Cucuruchones.Size = new System.Drawing.Size(100, 100);
-            this.Cucuruchones.TabIndex = 9;
-            this.Cucuruchones.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
-            // 
-            // King_Mix
-            // 
-            this.King_Mix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.King_Mix.Location = new System.Drawing.Point(128, 8);
-            this.King_Mix.Name = "King_Mix";
-            this.King_Mix.Size = new System.Drawing.Size(100, 100);
-            this.King_Mix.TabIndex = 10;
-            this.King_Mix.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
-            // 
-            // Cono
-            // 
-            this.Cono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cono.Location = new System.Drawing.Point(246, 8);
-            this.Cono.Name = "Cono";
-            this.Cono.Size = new System.Drawing.Size(100, 100);
-            this.Cono.TabIndex = 10;
-            this.Cono.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
-            // 
-            // Cono_Relleno
-            // 
-            this.Cono_Relleno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Cono_Relleno.Location = new System.Drawing.Point(364, 8);
-            this.Cono_Relleno.Name = "Cono_Relleno";
-            this.Cono_Relleno.Size = new System.Drawing.Size(100, 100);
-            this.Cono_Relleno.TabIndex = 10;
-            this.Cono_Relleno.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
+            this.LBLNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LBLNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLNombre.Location = new System.Drawing.Point(10, 139);
+            this.LBLNombre.Name = "LBLNombre";
+            this.LBLNombre.Size = new System.Drawing.Size(490, 61);
+            this.LBLNombre.TabIndex = 16;
+            this.LBLNombre.Text = ".";
             // 
             // Sundae
             // 
@@ -273,15 +237,51 @@
             this.Sundae.TabIndex = 10;
             this.Sundae.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
             // 
-            // LBLNombre
+            // Cono_Relleno
             // 
-            this.LBLNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LBLNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLNombre.Location = new System.Drawing.Point(10, 139);
-            this.LBLNombre.Name = "LBLNombre";
-            this.LBLNombre.Size = new System.Drawing.Size(490, 61);
-            this.LBLNombre.TabIndex = 16;
-            this.LBLNombre.Text = ".";
+            this.Cono_Relleno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cono_Relleno.Location = new System.Drawing.Point(364, 8);
+            this.Cono_Relleno.Name = "Cono_Relleno";
+            this.Cono_Relleno.Size = new System.Drawing.Size(100, 100);
+            this.Cono_Relleno.TabIndex = 10;
+            this.Cono_Relleno.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
+            // 
+            // Cono
+            // 
+            this.Cono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cono.Location = new System.Drawing.Point(246, 8);
+            this.Cono.Name = "Cono";
+            this.Cono.Size = new System.Drawing.Size(100, 100);
+            this.Cono.TabIndex = 10;
+            this.Cono.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
+            // 
+            // King_Mix
+            // 
+            this.King_Mix.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.King_Mix.Location = new System.Drawing.Point(128, 8);
+            this.King_Mix.Name = "King_Mix";
+            this.King_Mix.Size = new System.Drawing.Size(100, 100);
+            this.King_Mix.TabIndex = 10;
+            this.King_Mix.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
+            // 
+            // Cucuruchones
+            // 
+            this.Cucuruchones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cucuruchones.Location = new System.Drawing.Point(10, 8);
+            this.Cucuruchones.Name = "Cucuruchones";
+            this.Cucuruchones.Size = new System.Drawing.Size(100, 100);
+            this.Cucuruchones.TabIndex = 9;
+            this.Cucuruchones.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cucuruchones_MouseClick);
+            // 
+            // IMLPostres
+            // 
+            this.IMLPostres.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("IMLPostres.ImageStream")));
+            this.IMLPostres.TransparentColor = System.Drawing.Color.Transparent;
+            this.IMLPostres.Images.SetKeyName(0, "500x540_cucuruchones.png");
+            this.IMLPostres.Images.SetKeyName(1, "500x540_king-mix.png");
+            this.IMLPostres.Images.SetKeyName(2, "BK_Web_CONO_500X540px.png");
+            this.IMLPostres.Images.SetKeyName(3, "BK_Web_CONOS_RELLENOS_500X540px_0.png");
+            this.IMLPostres.Images.SetKeyName(4, "BK_Web_SUNDAE_500X540px.png");
             // 
             // FormPostres
             // 

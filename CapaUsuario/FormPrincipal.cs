@@ -15,6 +15,8 @@ namespace CapaUsuario
         public FormPrincipal()
         {
             InitializeComponent();
+            PNLCuotas.Visible = false;
+            PNLEfectivo.Visible = false;
         }
 
         private void PBXCerrar_Click(object sender, EventArgs e)
@@ -62,6 +64,29 @@ namespace CapaUsuario
         private void BTNPostres_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormPostres());
+        }
+
+        private void RBTNTarjeta_CheckedChanged(object sender, EventArgs e)
+        {
+            if(RBTNTarjeta.Checked)
+            {
+                PNLCuotas.Visible = true;
+                PNLEfectivo.Visible = false;
+            }  
+        }
+
+        private void RBTNEfectivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBTNEfectivo.Checked)
+            {
+                PNLCuotas.Visible = false;
+                PNLEfectivo.Visible = true;
+            }
+        }
+
+        private void PNLOcultar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -58,6 +58,13 @@
             this.PBXCerrar = new System.Windows.Forms.PictureBox();
             this.PBXMinimizar = new System.Windows.Forms.PictureBox();
             this.PNLTop = new System.Windows.Forms.Panel();
+            this.PNLEfectivo = new System.Windows.Forms.Panel();
+            this.LBLRecibido = new System.Windows.Forms.Label();
+            this.NUDRecibido = new System.Windows.Forms.NumericUpDown();
+            this.PNLOcultar = new System.Windows.Forms.Panel();
+            this.LBLDevolver = new System.Windows.Forms.Label();
+            this.LBLDevolverNumero = new System.Windows.Forms.Label();
+            this.PNLLineaEfectivo = new System.Windows.Forms.Panel();
             this.PNLContenedor.SuspendLayout();
             this.PNLMetodoPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPedido)).BeginInit();
@@ -66,12 +73,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBXCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBXMinimizar)).BeginInit();
             this.PNLTop.SuspendLayout();
+            this.PNLEfectivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDRecibido)).BeginInit();
             this.SuspendLayout();
             // 
             // PNLContenedor
             // 
             this.PNLContenedor.BackColor = System.Drawing.Color.White;
             this.PNLContenedor.CausesValidation = false;
+            this.PNLContenedor.Controls.Add(this.PNLEfectivo);
             this.PNLContenedor.Controls.Add(this.PNLLinea);
             this.PNLContenedor.Controls.Add(this.LBLObservaciones);
             this.PNLContenedor.Controls.Add(this.BTNConfirmar);
@@ -323,6 +333,7 @@
             this.RBTNTarjeta.TabStop = true;
             this.RBTNTarjeta.Text = "Tarjeta";
             this.RBTNTarjeta.UseVisualStyleBackColor = true;
+            this.RBTNTarjeta.CheckedChanged += new System.EventHandler(this.RBTNTarjeta_CheckedChanged);
             // 
             // RBTNEfectivo
             // 
@@ -336,6 +347,7 @@
             this.RBTNEfectivo.TabStop = true;
             this.RBTNEfectivo.Text = "Efectivo";
             this.RBTNEfectivo.UseVisualStyleBackColor = true;
+            this.RBTNEfectivo.CheckedChanged += new System.EventHandler(this.RBTNEfectivo_CheckedChanged);
             // 
             // DGVPedido
             // 
@@ -433,7 +445,7 @@
             this.PCBPedido.Image = ((System.Drawing.Image)(resources.GetObject("PCBPedido.Image")));
             this.PCBPedido.Location = new System.Drawing.Point(0, -1);
             this.PCBPedido.Name = "PCBPedido";
-            this.PCBPedido.Size = new System.Drawing.Size(1600, 154);
+            this.PCBPedido.Size = new System.Drawing.Size(1414, 154);
             this.PCBPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PCBPedido.TabIndex = 0;
             this.PCBPedido.TabStop = false;
@@ -475,6 +487,75 @@
             this.PNLTop.Size = new System.Drawing.Size(1350, 35);
             this.PNLTop.TabIndex = 7;
             // 
+            // PNLEfectivo
+            // 
+            this.PNLEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PNLEfectivo.BackColor = System.Drawing.Color.Transparent;
+            this.PNLEfectivo.Controls.Add(this.PNLLineaEfectivo);
+            this.PNLEfectivo.Controls.Add(this.LBLDevolverNumero);
+            this.PNLEfectivo.Controls.Add(this.LBLDevolver);
+            this.PNLEfectivo.Controls.Add(this.PNLOcultar);
+            this.PNLEfectivo.Controls.Add(this.NUDRecibido);
+            this.PNLEfectivo.Controls.Add(this.LBLRecibido);
+            this.PNLEfectivo.Location = new System.Drawing.Point(898, 387);
+            this.PNLEfectivo.Name = "PNLEfectivo";
+            this.PNLEfectivo.Size = new System.Drawing.Size(438, 170);
+            this.PNLEfectivo.TabIndex = 5;
+            // 
+            // LBLRecibido
+            // 
+            this.LBLRecibido.AutoSize = true;
+            this.LBLRecibido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLRecibido.Location = new System.Drawing.Point(8, 21);
+            this.LBLRecibido.Name = "LBLRecibido";
+            this.LBLRecibido.Size = new System.Drawing.Size(151, 24);
+            this.LBLRecibido.TabIndex = 0;
+            this.LBLRecibido.Text = "Dinero Recibido:";
+            // 
+            // NUDRecibido
+            // 
+            this.NUDRecibido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUDRecibido.Location = new System.Drawing.Point(165, 16);
+            this.NUDRecibido.Name = "NUDRecibido";
+            this.NUDRecibido.Size = new System.Drawing.Size(178, 29);
+            this.NUDRecibido.TabIndex = 1;
+            // 
+            // PNLOcultar
+            // 
+            this.PNLOcultar.Location = new System.Drawing.Point(321, 16);
+            this.PNLOcultar.Name = "PNLOcultar";
+            this.PNLOcultar.Size = new System.Drawing.Size(61, 32);
+            this.PNLOcultar.TabIndex = 2;
+            this.PNLOcultar.Paint += new System.Windows.Forms.PaintEventHandler(this.PNLOcultar_Paint);
+            // 
+            // LBLDevolver
+            // 
+            this.LBLDevolver.AutoSize = true;
+            this.LBLDevolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDevolver.Location = new System.Drawing.Point(8, 57);
+            this.LBLDevolver.Name = "LBLDevolver";
+            this.LBLDevolver.Size = new System.Drawing.Size(165, 24);
+            this.LBLDevolver.TabIndex = 3;
+            this.LBLDevolver.Text = "Dinero a Devolver:";
+            // 
+            // LBLDevolverNumero
+            // 
+            this.LBLDevolverNumero.AutoSize = true;
+            this.LBLDevolverNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDevolverNumero.Location = new System.Drawing.Point(178, 58);
+            this.LBLDevolverNumero.Name = "LBLDevolverNumero";
+            this.LBLDevolverNumero.Size = new System.Drawing.Size(40, 24);
+            this.LBLDevolverNumero.TabIndex = 4;
+            this.LBLDevolverNumero.Text = "000";
+            // 
+            // PNLLineaEfectivo
+            // 
+            this.PNLLineaEfectivo.BackColor = System.Drawing.Color.Gray;
+            this.PNLLineaEfectivo.Location = new System.Drawing.Point(317, 16);
+            this.PNLLineaEfectivo.Name = "PNLLineaEfectivo";
+            this.PNLLineaEfectivo.Size = new System.Drawing.Size(3, 29);
+            this.PNLLineaEfectivo.TabIndex = 5;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,6 +580,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBXCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBXMinimizar)).EndInit();
             this.PNLTop.ResumeLayout(false);
+            this.PNLEfectivo.ResumeLayout(false);
+            this.PNLEfectivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDRecibido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,5 +618,12 @@
         private System.Windows.Forms.Button BTNBebidas;
         private System.Windows.Forms.Button BTNCombos;
         private System.Windows.Forms.Panel PNLLinea;
+        private System.Windows.Forms.Panel PNLEfectivo;
+        private System.Windows.Forms.Label LBLDevolverNumero;
+        private System.Windows.Forms.Label LBLDevolver;
+        private System.Windows.Forms.Panel PNLOcultar;
+        private System.Windows.Forms.NumericUpDown NUDRecibido;
+        private System.Windows.Forms.Label LBLRecibido;
+        private System.Windows.Forms.Panel PNLLineaEfectivo;
     }
 }
