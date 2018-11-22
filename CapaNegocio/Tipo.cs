@@ -11,6 +11,8 @@ namespace CapaNegocio
         #region Variables Miembro
         int idTipo;
         string nombre;
+
+       
         #endregion
 
         #region Propiedades
@@ -22,6 +24,11 @@ namespace CapaNegocio
         #endregion
 
         #region Constructor
+        public Tipo(int idTipo, string nombre)
+        {
+            this.idTipo = idTipo;
+            this.nombre = nombre;
+        }
         #endregion
 
     }

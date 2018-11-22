@@ -23,6 +23,13 @@ namespace CapaNegocio
         #endregion
 
         #region Bob
+        public Producto(int id, string nomb, double precio, int fktipo)
+        {
+            this.idProducto = id;
+            this.nombre = nomb;
+            this.precio = precio;
+            this.fkTipo = fktipo;
+        }
         #endregion
 
         #region Constructor

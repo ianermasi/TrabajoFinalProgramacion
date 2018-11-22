@@ -30,6 +30,15 @@ namespace CapaNegocio
         #endregion
 
         #region Constructor
+        public Detalle(int idDetalle, int fkPedido, int fkProducto, string observaciones, int fkTamano, double precio)
+        {
+            this.idDetalle = idDetalle;
+            this.fkPedido = fkPedido;
+            this.fkProducto = fkProducto;
+            this.Observaciones = observaciones;
+            this.fkTamano = fkTamano;
+            this.Precio = precio;
+        }
         #endregion
     }
 }
