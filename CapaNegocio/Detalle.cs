@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    class Detalle
+    public class Detalle
     {
         #region Variables Miembro
         int idDetalle;

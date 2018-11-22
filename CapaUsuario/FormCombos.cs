@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaNegocio;
 namespace CapaUsuario
 {
     public partial class FormCombos : Form
@@ -54,7 +54,17 @@ namespace CapaUsuario
                 (x as Panel).BackColor = Color.White;
             }
             (sender as Panel).BackColor = Color.LightBlue;
-            LBLNombre.Text = (sender as Panel).Name;
+            string[] nombre = null;
+            try
+            {
+                nombre = (sender as Panel).Name.Split('_');
+            }
+            catch (Exception ex) { MessageBox.Show("Error" + ex); }
+
+            foreach (string x in nombre)
+            {
+                LBLNombre.Text = LBLNombre.Text + " " + x;
+            }
         }
     }
 }

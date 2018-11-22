@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace CapaUsuario
 {
@@ -46,13 +47,25 @@ namespace CapaUsuario
 
         private void Long_Classic_MouseClick(object sender, MouseEventArgs e)
         {
+            LBLNombre.Text = "";
             foreach (object x in PNLContenedor.Controls)
             {
                 if (x is Panel)
                     (x as Panel).BackColor = Color.White;
             }
             (sender as Panel).BackColor = Color.LightBlue;
-            LBLNombre.Text = (sender as Panel).Name;
+            string[] nombre = null;
+            try
+            {
+                nombre = (sender as Panel).Name.Split('_');
+            }
+            catch { MessageBox.Show("hla"); }
+
+            foreach (string x in nombre)
+            {
+                LBLNombre.Text = LBLNombre.Text + "" + x;
+            }
+
         }
     }
 }

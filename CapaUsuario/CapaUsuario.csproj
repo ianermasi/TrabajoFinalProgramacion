@@ -98,12 +98,6 @@
     <None Include="Resources\Insanibc.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
-      <Project>{9c609c26-8310-4f04-b59e-1cba51aa939a}</Project>
-      <Name>CapaNegocio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="FormBebidas.resx">
       <DependentUpon>FormBebidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +200,12 @@
     <Content Include="Resources\Usuario.png" />
     <Content Include="Resources\whopper.png" />
     <Content Include="Resources\whopper_extreme-high.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{9c609c26-8310-4f04-b59e-1cba51aa939a}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
