@@ -1,1 +1,60 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProgramacionFinal" Class="dataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.100;Initial Catalog=ProgramacionFinal;User ID=sa" SettingsObjectName="CapaDato.Properties.Settings" SettingsPropertyName="ProgramacionFinalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Detalle" Member="EDetalle">
+    <Type Name="EDetalle">
+      <Column Name="idDetalle" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fkPedido" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkProducto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fkTamano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Pedido_Detalle" Member="EPedido" ThisKey="fkPedido" OtherKey="idPedido" Type="EPedido" IsForeignKey="true" />
+      <Association Name="Producto_Detalle" Member="EProducto" ThisKey="fkProducto" OtherKey="idProducto" Type="EProducto" IsForeignKey="true" />
+      <Association Name="Tamano_Detalle" Member="ETamano" ThisKey="fkTamano" OtherKey="idTamano" Type="ETamano" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipo" Member="ETipo">
+    <Type Name="ETipo">
+      <Column Name="idTipo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Tipo_Producto" Member="EProducto" ThisKey="idTipo" OtherKey="fkTipo" Type="EProducto" />
+      <Association Name="Tipo_PT" Member="EPT" ThisKey="idTipo" OtherKey="fkTipo" Type="EPT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pedido" Member="EPedido">
+    <Type Name="EPedido">
+      <Column Name="idPedido" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Pedido_Detalle" Member="EDetalle" ThisKey="idPedido" OtherKey="fkPedido" Type="EDetalle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Producto" Member="EProducto">
+    <Type Name="EProducto">
+      <Column Name="idProducto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="fkTipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Producto_Detalle" Member="EDetalle" ThisKey="idProducto" OtherKey="fkProducto" Type="EDetalle" />
+      <Association Name="Tipo_Producto" Member="ETipo" ThisKey="fkTipo" OtherKey="idTipo" Type="ETipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT" Member="EPT">
+    <Type Name="EPT">
+      <Column Name="idPT" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fkTipo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fkTamano" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tipo_PT" Member="ETipo" ThisKey="fkTipo" OtherKey="idTipo" Type="ETipo" IsForeignKey="true" />
+      <Association Name="Tamano_PT" Member="ETamano" ThisKey="fkTamano" OtherKey="idTamano" Type="ETamano" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tamano" Member="ETamano">
+    <Type Name="ETamano">
+      <Column Name="idTamano" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="precio" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Tamano_Detalle" Member="EDetalle" ThisKey="idTamano" OtherKey="fkTamano" Type="EDetalle" />
+      <Association Name="Tamano_PT" Member="EPT" ThisKey="idTamano" OtherKey="fkTamano" Type="EPT" />
+    </Type>
+  </Table>
+</Database>

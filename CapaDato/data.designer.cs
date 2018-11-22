@@ -22,6 +22,7 @@ namespace CapaDato
 	using System;
 	
 	
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ProgramacionFinal")]
 	public partial class dataDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -29,7 +30,31 @@ namespace CapaDato
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnCreated();
+    partial void InsertEDetalle(EDetalle instance);
+    partial void UpdateEDetalle(EDetalle instance);
+    partial void DeleteEDetalle(EDetalle instance);
+    partial void InsertETipo(ETipo instance);
+    partial void UpdateETipo(ETipo instance);
+    partial void DeleteETipo(ETipo instance);
+    partial void InsertEPedido(EPedido instance);
+    partial void UpdateEPedido(EPedido instance);
+    partial void DeleteEPedido(EPedido instance);
+    partial void InsertEProducto(EProducto instance);
+    partial void UpdateEProducto(EProducto instance);
+    partial void DeleteEProducto(EProducto instance);
+    partial void InsertEPT(EPT instance);
+    partial void UpdateEPT(EPT instance);
+    partial void DeleteEPT(EPT instance);
+    partial void InsertETamano(ETamano instance);
+    partial void UpdateETamano(ETamano instance);
+    partial void DeleteETamano(ETamano instance);
     #endregion
+		
+		public dataDataContext() : 
+				base(global::CapaDato.Properties.Settings.Default.ProgramacionFinalConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
 		
 		public dataDataContext(string connection) : 
 				base(connection, mappingSource)
@@ -53,6 +78,1200 @@ namespace CapaDato
 				base(connection, mappingSource)
 		{
 			OnCreated();
+		}
+		
+		public System.Data.Linq.Table<EDetalle> EDetalle
+		{
+			get
+			{
+				return this.GetTable<EDetalle>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ETipo> ETipo
+		{
+			get
+			{
+				return this.GetTable<ETipo>();
+			}
+		}
+		
+		public System.Data.Linq.Table<EPedido> EPedido
+		{
+			get
+			{
+				return this.GetTable<EPedido>();
+			}
+		}
+		
+		public System.Data.Linq.Table<EProducto> EProducto
+		{
+			get
+			{
+				return this.GetTable<EProducto>();
+			}
+		}
+		
+		public System.Data.Linq.Table<EPT> EPT
+		{
+			get
+			{
+				return this.GetTable<EPT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ETamano> ETamano
+		{
+			get
+			{
+				return this.GetTable<ETamano>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Detalle")]
+	public partial class EDetalle : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idDetalle;
+		
+		private System.Nullable<int> _fkPedido;
+		
+		private System.Nullable<int> _fkProducto;
+		
+		private string _Observaciones;
+		
+		private System.Nullable<int> _fkTamano;
+		
+		private System.Nullable<decimal> _Precio;
+		
+		private EntityRef<EPedido> _EPedido;
+		
+		private EntityRef<EProducto> _EProducto;
+		
+		private EntityRef<ETamano> _ETamano;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidDetalleChanging(int value);
+    partial void OnidDetalleChanged();
+    partial void OnfkPedidoChanging(System.Nullable<int> value);
+    partial void OnfkPedidoChanged();
+    partial void OnfkProductoChanging(System.Nullable<int> value);
+    partial void OnfkProductoChanged();
+    partial void OnObservacionesChanging(string value);
+    partial void OnObservacionesChanged();
+    partial void OnfkTamanoChanging(System.Nullable<int> value);
+    partial void OnfkTamanoChanged();
+    partial void OnPrecioChanging(System.Nullable<decimal> value);
+    partial void OnPrecioChanged();
+    #endregion
+		
+		public EDetalle()
+		{
+			this._EPedido = default(EntityRef<EPedido>);
+			this._EProducto = default(EntityRef<EProducto>);
+			this._ETamano = default(EntityRef<ETamano>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idDetalle", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idDetalle
+		{
+			get
+			{
+				return this._idDetalle;
+			}
+			set
+			{
+				if ((this._idDetalle != value))
+				{
+					this.OnidDetalleChanging(value);
+					this.SendPropertyChanging();
+					this._idDetalle = value;
+					this.SendPropertyChanged("idDetalle");
+					this.OnidDetalleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fkPedido", DbType="Int")]
+		public System.Nullable<int> fkPedido
+		{
+			get
+			{
+				return this._fkPedido;
+			}
+			set
+			{
+				if ((this._fkPedido != value))
+				{
+					if (this._EPedido.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnfkPedidoChanging(value);
+					this.SendPropertyChanging();
+					this._fkPedido = value;
+					this.SendPropertyChanged("fkPedido");
+					this.OnfkPedidoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fkProducto", DbType="Int")]
+		public System.Nullable<int> fkProducto
+		{
+			get
+			{
+				return this._fkProducto;
+			}
+			set
+			{
+				if ((this._fkProducto != value))
+				{
+					if (this._EProducto.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnfkProductoChanging(value);
+					this.SendPropertyChanging();
+					this._fkProducto = value;
+					this.SendPropertyChanged("fkProducto");
+					this.OnfkProductoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observaciones", DbType="VarChar(50)")]
+		public string Observaciones
+		{
+			get
+			{
+				return this._Observaciones;
+			}
+			set
+			{
+				if ((this._Observaciones != value))
+				{
+					this.OnObservacionesChanging(value);
+					this.SendPropertyChanging();
+					this._Observaciones = value;
+					this.SendPropertyChanged("Observaciones");
+					this.OnObservacionesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fkTamano", DbType="Int")]
+		public System.Nullable<int> fkTamano
+		{
+			get
+			{
+				return this._fkTamano;
+			}
+			set
+			{
+				if ((this._fkTamano != value))
+				{
+					if (this._ETamano.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnfkTamanoChanging(value);
+					this.SendPropertyChanging();
+					this._fkTamano = value;
+					this.SendPropertyChanged("fkTamano");
+					this.OnfkTamanoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Precio
+		{
+			get
+			{
+				return this._Precio;
+			}
+			set
+			{
+				if ((this._Precio != value))
+				{
+					this.OnPrecioChanging(value);
+					this.SendPropertyChanging();
+					this._Precio = value;
+					this.SendPropertyChanged("Precio");
+					this.OnPrecioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pedido_Detalle", Storage="_EPedido", ThisKey="fkPedido", OtherKey="idPedido", IsForeignKey=true)]
+		public EPedido EPedido
+		{
+			get
+			{
+				return this._EPedido.Entity;
+			}
+			set
+			{
+				EPedido previousValue = this._EPedido.Entity;
+				if (((previousValue != value) 
+							|| (this._EPedido.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._EPedido.Entity = null;
+						previousValue.EDetalle.Remove(this);
+					}
+					this._EPedido.Entity = value;
+					if ((value != null))
+					{
+						value.EDetalle.Add(this);
+						this._fkPedido = value.idPedido;
+					}
+					else
+					{
+						this._fkPedido = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("EPedido");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Producto_Detalle", Storage="_EProducto", ThisKey="fkProducto", OtherKey="idProducto", IsForeignKey=true)]
+		public EProducto EProducto
+		{
+			get
+			{
+				return this._EProducto.Entity;
+			}
+			set
+			{
+				EProducto previousValue = this._EProducto.Entity;
+				if (((previousValue != value) 
+							|| (this._EProducto.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._EProducto.Entity = null;
+						previousValue.EDetalle.Remove(this);
+					}
+					this._EProducto.Entity = value;
+					if ((value != null))
+					{
+						value.EDetalle.Add(this);
+						this._fkProducto = value.idProducto;
+					}
+					else
+					{
+						this._fkProducto = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("EProducto");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tamano_Detalle", Storage="_ETamano", ThisKey="fkTamano", OtherKey="idTamano", IsForeignKey=true)]
+		public ETamano ETamano
+		{
+			get
+			{
+				return this._ETamano.Entity;
+			}
+			set
+			{
+				ETamano previousValue = this._ETamano.Entity;
+				if (((previousValue != value) 
+							|| (this._ETamano.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ETamano.Entity = null;
+						previousValue.EDetalle.Remove(this);
+					}
+					this._ETamano.Entity = value;
+					if ((value != null))
+					{
+						value.EDetalle.Add(this);
+						this._fkTamano = value.idTamano;
+					}
+					else
+					{
+						this._fkTamano = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ETamano");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tipo")]
+	public partial class ETipo : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idTipo;
+		
+		private string _nombre;
+		
+		private EntitySet<EProducto> _EProducto;
+		
+		private EntitySet<EPT> _EPT;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidTipoChanging(int value);
+    partial void OnidTipoChanged();
+    partial void OnnombreChanging(string value);
+    partial void OnnombreChanged();
+    #endregion
+		
+		public ETipo()
+		{
+			this._EProducto = new EntitySet<EProducto>(new Action<EProducto>(this.attach_EProducto), new Action<EProducto>(this.detach_EProducto));
+			this._EPT = new EntitySet<EPT>(new Action<EPT>(this.attach_EPT), new Action<EPT>(this.detach_EPT));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTipo", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idTipo
+		{
+			get
+			{
+				return this._idTipo;
+			}
+			set
+			{
+				if ((this._idTipo != value))
+				{
+					this.OnidTipoChanging(value);
+					this.SendPropertyChanging();
+					this._idTipo = value;
+					this.SendPropertyChanged("idTipo");
+					this.OnidTipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(50)")]
+		public string nombre
+		{
+			get
+			{
+				return this._nombre;
+			}
+			set
+			{
+				if ((this._nombre != value))
+				{
+					this.OnnombreChanging(value);
+					this.SendPropertyChanging();
+					this._nombre = value;
+					this.SendPropertyChanged("nombre");
+					this.OnnombreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tipo_Producto", Storage="_EProducto", ThisKey="idTipo", OtherKey="fkTipo")]
+		public EntitySet<EProducto> EProducto
+		{
+			get
+			{
+				return this._EProducto;
+			}
+			set
+			{
+				this._EProducto.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tipo_PT", Storage="_EPT", ThisKey="idTipo", OtherKey="fkTipo")]
+		public EntitySet<EPT> EPT
+		{
+			get
+			{
+				return this._EPT;
+			}
+			set
+			{
+				this._EPT.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_EProducto(EProducto entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETipo = this;
+		}
+		
+		private void detach_EProducto(EProducto entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETipo = null;
+		}
+		
+		private void attach_EPT(EPT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETipo = this;
+		}
+		
+		private void detach_EPT(EPT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETipo = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Pedido")]
+	public partial class EPedido : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idPedido;
+		
+		private System.Nullable<System.DateTime> _fecha;
+		
+		private System.Nullable<decimal> _total;
+		
+		private EntitySet<EDetalle> _EDetalle;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidPedidoChanging(int value);
+    partial void OnidPedidoChanged();
+    partial void OnfechaChanging(System.Nullable<System.DateTime> value);
+    partial void OnfechaChanged();
+    partial void OntotalChanging(System.Nullable<decimal> value);
+    partial void OntotalChanged();
+    #endregion
+		
+		public EPedido()
+		{
+			this._EDetalle = new EntitySet<EDetalle>(new Action<EDetalle>(this.attach_EDetalle), new Action<EDetalle>(this.detach_EDetalle));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPedido", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idPedido
+		{
+			get
+			{
+				return this._idPedido;
+			}
+			set
+			{
+				if ((this._idPedido != value))
+				{
+					this.OnidPedidoChanging(value);
+					this.SendPropertyChanging();
+					this._idPedido = value;
+					this.SendPropertyChanged("idPedido");
+					this.OnidPedidoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fecha
+		{
+			get
+			{
+				return this._fecha;
+			}
+			set
+			{
+				if ((this._fecha != value))
+				{
+					this.OnfechaChanging(value);
+					this.SendPropertyChanging();
+					this._fecha = value;
+					this.SendPropertyChanged("fecha");
+					this.OnfechaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((this._total != value))
+				{
+					this.OntotalChanging(value);
+					this.SendPropertyChanging();
+					this._total = value;
+					this.SendPropertyChanged("total");
+					this.OntotalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pedido_Detalle", Storage="_EDetalle", ThisKey="idPedido", OtherKey="fkPedido")]
+		public EntitySet<EDetalle> EDetalle
+		{
+			get
+			{
+				return this._EDetalle;
+			}
+			set
+			{
+				this._EDetalle.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_EDetalle(EDetalle entity)
+		{
+			this.SendPropertyChanging();
+			entity.EPedido = this;
+		}
+		
+		private void detach_EDetalle(EDetalle entity)
+		{
+			this.SendPropertyChanging();
+			entity.EPedido = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Producto")]
+	public partial class EProducto : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idProducto;
+		
+		private string _nombre;
+		
+		private System.Nullable<decimal> _precio;
+		
+		private System.Nullable<int> _fkTipo;
+		
+		private EntitySet<EDetalle> _EDetalle;
+		
+		private EntityRef<ETipo> _ETipo;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidProductoChanging(int value);
+    partial void OnidProductoChanged();
+    partial void OnnombreChanging(string value);
+    partial void OnnombreChanged();
+    partial void OnprecioChanging(System.Nullable<decimal> value);
+    partial void OnprecioChanged();
+    partial void OnfkTipoChanging(System.Nullable<int> value);
+    partial void OnfkTipoChanged();
+    #endregion
+		
+		public EProducto()
+		{
+			this._EDetalle = new EntitySet<EDetalle>(new Action<EDetalle>(this.attach_EDetalle), new Action<EDetalle>(this.detach_EDetalle));
+			this._ETipo = default(EntityRef<ETipo>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idProducto", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idProducto
+		{
+			get
+			{
+				return this._idProducto;
+			}
+			set
+			{
+				if ((this._idProducto != value))
+				{
+					this.OnidProductoChanging(value);
+					this.SendPropertyChanging();
+					this._idProducto = value;
+					this.SendPropertyChanged("idProducto");
+					this.OnidProductoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(50)")]
+		public string nombre
+		{
+			get
+			{
+				return this._nombre;
+			}
+			set
+			{
+				if ((this._nombre != value))
+				{
+					this.OnnombreChanging(value);
+					this.SendPropertyChanging();
+					this._nombre = value;
+					this.SendPropertyChanged("nombre");
+					this.OnnombreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_precio", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> precio
+		{
+			get
+			{
+				return this._precio;
+			}
+			set
+			{
+				if ((this._precio != value))
+				{
+					this.OnprecioChanging(value);
+					this.SendPropertyChanging();
+					this._precio = value;
+					this.SendPropertyChanged("precio");
+					this.OnprecioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fkTipo", DbType="Int")]
+		public System.Nullable<int> fkTipo
+		{
+			get
+			{
+				return this._fkTipo;
+			}
+			set
+			{
+				if ((this._fkTipo != value))
+				{
+					if (this._ETipo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnfkTipoChanging(value);
+					this.SendPropertyChanging();
+					this._fkTipo = value;
+					this.SendPropertyChanged("fkTipo");
+					this.OnfkTipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Producto_Detalle", Storage="_EDetalle", ThisKey="idProducto", OtherKey="fkProducto")]
+		public EntitySet<EDetalle> EDetalle
+		{
+			get
+			{
+				return this._EDetalle;
+			}
+			set
+			{
+				this._EDetalle.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tipo_Producto", Storage="_ETipo", ThisKey="fkTipo", OtherKey="idTipo", IsForeignKey=true)]
+		public ETipo ETipo
+		{
+			get
+			{
+				return this._ETipo.Entity;
+			}
+			set
+			{
+				ETipo previousValue = this._ETipo.Entity;
+				if (((previousValue != value) 
+							|| (this._ETipo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ETipo.Entity = null;
+						previousValue.EProducto.Remove(this);
+					}
+					this._ETipo.Entity = value;
+					if ((value != null))
+					{
+						value.EProducto.Add(this);
+						this._fkTipo = value.idTipo;
+					}
+					else
+					{
+						this._fkTipo = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ETipo");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_EDetalle(EDetalle entity)
+		{
+			this.SendPropertyChanging();
+			entity.EProducto = this;
+		}
+		
+		private void detach_EDetalle(EDetalle entity)
+		{
+			this.SendPropertyChanging();
+			entity.EProducto = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PT")]
+	public partial class EPT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idPT;
+		
+		private System.Nullable<int> _fkTipo;
+		
+		private System.Nullable<int> _fkTamano;
+		
+		private EntityRef<ETipo> _ETipo;
+		
+		private EntityRef<ETamano> _ETamano;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidPTChanging(int value);
+    partial void OnidPTChanged();
+    partial void OnfkTipoChanging(System.Nullable<int> value);
+    partial void OnfkTipoChanged();
+    partial void OnfkTamanoChanging(System.Nullable<int> value);
+    partial void OnfkTamanoChanged();
+    #endregion
+		
+		public EPT()
+		{
+			this._ETipo = default(EntityRef<ETipo>);
+			this._ETamano = default(EntityRef<ETamano>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPT", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idPT
+		{
+			get
+			{
+				return this._idPT;
+			}
+			set
+			{
+				if ((this._idPT != value))
+				{
+					this.OnidPTChanging(value);
+					this.SendPropertyChanging();
+					this._idPT = value;
+					this.SendPropertyChanged("idPT");
+					this.OnidPTChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fkTipo", DbType="Int")]
+		public System.Nullable<int> fkTipo
+		{
+			get
+			{
+				return this._fkTipo;
+			}
+			set
+			{
+				if ((this._fkTipo != value))
+				{
+					if (this._ETipo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnfkTipoChanging(value);
+					this.SendPropertyChanging();
+					this._fkTipo = value;
+					this.SendPropertyChanged("fkTipo");
+					this.OnfkTipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fkTamano", DbType="Int")]
+		public System.Nullable<int> fkTamano
+		{
+			get
+			{
+				return this._fkTamano;
+			}
+			set
+			{
+				if ((this._fkTamano != value))
+				{
+					if (this._ETamano.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnfkTamanoChanging(value);
+					this.SendPropertyChanging();
+					this._fkTamano = value;
+					this.SendPropertyChanged("fkTamano");
+					this.OnfkTamanoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tipo_PT", Storage="_ETipo", ThisKey="fkTipo", OtherKey="idTipo", IsForeignKey=true)]
+		public ETipo ETipo
+		{
+			get
+			{
+				return this._ETipo.Entity;
+			}
+			set
+			{
+				ETipo previousValue = this._ETipo.Entity;
+				if (((previousValue != value) 
+							|| (this._ETipo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ETipo.Entity = null;
+						previousValue.EPT.Remove(this);
+					}
+					this._ETipo.Entity = value;
+					if ((value != null))
+					{
+						value.EPT.Add(this);
+						this._fkTipo = value.idTipo;
+					}
+					else
+					{
+						this._fkTipo = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ETipo");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tamano_PT", Storage="_ETamano", ThisKey="fkTamano", OtherKey="idTamano", IsForeignKey=true)]
+		public ETamano ETamano
+		{
+			get
+			{
+				return this._ETamano.Entity;
+			}
+			set
+			{
+				ETamano previousValue = this._ETamano.Entity;
+				if (((previousValue != value) 
+							|| (this._ETamano.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ETamano.Entity = null;
+						previousValue.EPT.Remove(this);
+					}
+					this._ETamano.Entity = value;
+					if ((value != null))
+					{
+						value.EPT.Add(this);
+						this._fkTamano = value.idTamano;
+					}
+					else
+					{
+						this._fkTamano = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ETamano");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tamano")]
+	public partial class ETamano : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idTamano;
+		
+		private string _nombre;
+		
+		private System.Nullable<decimal> _precio;
+		
+		private EntitySet<EDetalle> _EDetalle;
+		
+		private EntitySet<EPT> _EPT;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidTamanoChanging(int value);
+    partial void OnidTamanoChanged();
+    partial void OnnombreChanging(string value);
+    partial void OnnombreChanged();
+    partial void OnprecioChanging(System.Nullable<decimal> value);
+    partial void OnprecioChanged();
+    #endregion
+		
+		public ETamano()
+		{
+			this._EDetalle = new EntitySet<EDetalle>(new Action<EDetalle>(this.attach_EDetalle), new Action<EDetalle>(this.detach_EDetalle));
+			this._EPT = new EntitySet<EPT>(new Action<EPT>(this.attach_EPT), new Action<EPT>(this.detach_EPT));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTamano", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idTamano
+		{
+			get
+			{
+				return this._idTamano;
+			}
+			set
+			{
+				if ((this._idTamano != value))
+				{
+					this.OnidTamanoChanging(value);
+					this.SendPropertyChanging();
+					this._idTamano = value;
+					this.SendPropertyChanged("idTamano");
+					this.OnidTamanoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(50)")]
+		public string nombre
+		{
+			get
+			{
+				return this._nombre;
+			}
+			set
+			{
+				if ((this._nombre != value))
+				{
+					this.OnnombreChanging(value);
+					this.SendPropertyChanging();
+					this._nombre = value;
+					this.SendPropertyChanged("nombre");
+					this.OnnombreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_precio", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> precio
+		{
+			get
+			{
+				return this._precio;
+			}
+			set
+			{
+				if ((this._precio != value))
+				{
+					this.OnprecioChanging(value);
+					this.SendPropertyChanging();
+					this._precio = value;
+					this.SendPropertyChanged("precio");
+					this.OnprecioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tamano_Detalle", Storage="_EDetalle", ThisKey="idTamano", OtherKey="fkTamano")]
+		public EntitySet<EDetalle> EDetalle
+		{
+			get
+			{
+				return this._EDetalle;
+			}
+			set
+			{
+				this._EDetalle.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tamano_PT", Storage="_EPT", ThisKey="idTamano", OtherKey="fkTamano")]
+		public EntitySet<EPT> EPT
+		{
+			get
+			{
+				return this._EPT;
+			}
+			set
+			{
+				this._EPT.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_EDetalle(EDetalle entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETamano = this;
+		}
+		
+		private void detach_EDetalle(EDetalle entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETamano = null;
+		}
+		
+		private void attach_EPT(EPT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETamano = this;
+		}
+		
+		private void detach_EPT(EPT entity)
+		{
+			this.SendPropertyChanging();
+			entity.ETamano = null;
 		}
 	}
 }
