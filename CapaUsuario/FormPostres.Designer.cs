@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPostres));
             this.PNLOpciones = new System.Windows.Forms.Panel();
+            this.BTNConfirmar = new System.Windows.Forms.Button();
             this.PNLContSalsa = new System.Windows.Forms.Panel();
             this.LBLSalsa = new System.Windows.Forms.Label();
             this.RBTNDulce = new System.Windows.Forms.RadioButton();
@@ -60,12 +61,30 @@
             this.PNLOpciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PNLOpciones.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PNLOpciones.Controls.Add(this.BTNConfirmar);
             this.PNLOpciones.Controls.Add(this.PNLContSalsa);
             this.PNLOpciones.Controls.Add(this.PNLContHelado);
             this.PNLOpciones.Location = new System.Drawing.Point(1, 207);
             this.PNLOpciones.Name = "PNLOpciones";
             this.PNLOpciones.Size = new System.Drawing.Size(830, 147);
             this.PNLOpciones.TabIndex = 8;
+            // 
+            // BTNConfirmar
+            // 
+            this.BTNConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTNConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
+            this.BTNConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNConfirmar.FlatAppearance.BorderSize = 0;
+            this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
+            this.BTNConfirmar.Location = new System.Drawing.Point(659, 114);
+            this.BTNConfirmar.Name = "BTNConfirmar";
+            this.BTNConfirmar.Size = new System.Drawing.Size(162, 30);
+            this.BTNConfirmar.TabIndex = 54;
+            this.BTNConfirmar.Text = "Confirmar";
+            this.BTNConfirmar.UseVisualStyleBackColor = false;
             // 
             // PNLContSalsa
             // 
@@ -136,13 +155,13 @@
             // 
             // PNLContHelado
             // 
-            this.PNLContHelado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.PNLContHelado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PNLContHelado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PNLContHelado.Controls.Add(this.LBLHelado);
             this.PNLContHelado.Controls.Add(this.RBTNVainilla);
             this.PNLContHelado.Controls.Add(this.RBTNMixto);
             this.PNLContHelado.Controls.Add(this.RBTNDulceDeLeche);
-            this.PNLContHelado.Location = new System.Drawing.Point(577, 5);
+            this.PNLContHelado.Location = new System.Drawing.Point(259, 3);
             this.PNLContHelado.Name = "PNLContHelado";
             this.PNLContHelado.Size = new System.Drawing.Size(250, 139);
             this.PNLContHelado.TabIndex = 20;
@@ -325,5 +344,6 @@
         private System.Windows.Forms.Panel King_Mix;
         private System.Windows.Forms.Panel Cucuruchones;
         private System.Windows.Forms.Label LBLNombre;
+        private System.Windows.Forms.Button BTNConfirmar;
     }
 }
