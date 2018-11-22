@@ -57,5 +57,25 @@ namespace CapaUsuario
         {
             AbrirFormulario(new FormCombos());
         }
+
+        private void BTNBebidas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormBebidas());
+        }
+
+        private void BTNHamburguesas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormHamburguesas());
+        }
+
+        private void BTNExtras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormExtras());
+        }
+
+        private void BTNPostres_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormPostres());
+        }
     }
 }

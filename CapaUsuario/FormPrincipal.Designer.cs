@@ -162,6 +162,7 @@
             this.BTNPostres.TabIndex = 51;
             this.BTNPostres.Text = "Postres";
             this.BTNPostres.UseVisualStyleBackColor = false;
+            this.BTNPostres.Click += new System.EventHandler(this.BTNPostres_Click);
             // 
             // BTNExtras
             // 
@@ -179,6 +180,7 @@
             this.BTNExtras.TabIndex = 50;
             this.BTNExtras.Text = "Extras";
             this.BTNExtras.UseVisualStyleBackColor = false;
+            this.BTNExtras.Click += new System.EventHandler(this.BTNExtras_Click);
             // 
             // BTNHamburguesas
             // 
@@ -197,6 +199,7 @@
             this.BTNHamburguesas.TabIndex = 49;
             this.BTNHamburguesas.Text = "Hamburguesas";
             this.BTNHamburguesas.UseVisualStyleBackColor = false;
+            this.BTNHamburguesas.Click += new System.EventHandler(this.BTNHamburguesas_Click);
             // 
             // BTNBebidas
             // 
@@ -213,6 +216,7 @@
             this.BTNBebidas.TabIndex = 48;
             this.BTNBebidas.Text = "Bebidas";
             this.BTNBebidas.UseVisualStyleBackColor = false;
+            this.BTNBebidas.Click += new System.EventHandler(this.BTNBebidas_Click);
             // 
             // BTNCombos
             // 
@@ -270,6 +274,8 @@
             this.PNLForms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PNLForms.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PNLForms.BackColor = System.Drawing.Color.Transparent;
             this.PNLForms.Location = new System.Drawing.Point(41, 189);
             this.PNLForms.Name = "PNLForms";
             this.PNLForms.Size = new System.Drawing.Size(834, 371);

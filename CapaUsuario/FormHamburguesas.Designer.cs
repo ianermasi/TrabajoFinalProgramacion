@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.PNLContenedor = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // PNLContenedor
+            // 
+            this.PNLContenedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PNLContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PNLContenedor.Location = new System.Drawing.Point(12, 12);
+            this.PNLContenedor.Name = "PNLContenedor";
+            this.PNLContenedor.Size = new System.Drawing.Size(810, 347);
+            this.PNLContenedor.TabIndex = 7;
             // 
             // FormHamburguesas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(834, 371);
+            this.Controls.Add(this.PNLContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHamburguesas";
             this.Text = "FormHamburguesas";
@@ -43,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel PNLContenedor;
     }
 }
