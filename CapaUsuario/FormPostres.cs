@@ -15,6 +15,7 @@ namespace CapaUsuario
         public FormPostres()
         {
             InitializeComponent();
+            CargarImagenes();
         }
 
         private void RBTNFrutilla_CheckedChanged(object sender, EventArgs e)
@@ -35,6 +36,26 @@ namespace CapaUsuario
         private void LBLSalsa_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CargarImagenes()
+        {
+            Cucuruchones.BackgroundImage = IMLPostres.Images[0];
+            King_Mix.BackgroundImage = IMLPostres.Images[1];
+            Cono.BackgroundImage = IMLPostres.Images[2];
+            Cono_Relleno.BackgroundImage = IMLPostres.Images[3];
+            Sundae.BackgroundImage = IMLPostres.Images[4];
+        }
+
+        private void Cucuruchones_MouseClick(object sender, MouseEventArgs e)
+        {
+            foreach (object x in PNLContenedor.Controls)
+            {
+                if (x is Panel)
+                    (x as Panel).BackColor = Color.White;
+            }
+            (sender as Panel).BackColor = Color.LightBlue;
+            LBLNombre.Text = (sender as Panel).Name;
         }
     }
 }

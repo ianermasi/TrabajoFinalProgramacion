@@ -27,20 +27,6 @@ namespace CapaUsuario
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void PBXRestaurar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            PBXRestaurar.Visible = false;
-            PBXMaximizar.Visible = true;
-        }
-
-        private void PBXMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            PBXMaximizar.Visible = false;
-            PBXRestaurar.Visible = true;
-        }
-
         private void AbrirFormulario(object formhijo)
         {
             if (this.PNLForms.Controls.Count > 0)

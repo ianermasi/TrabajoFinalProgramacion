@@ -13,13 +13,48 @@ namespace CapaNegocio
         string nombre;
         double precio;
 
-        
+
         #endregion
 
         #region Propiedades
-        public string Nombre { get => nombre; set => nombre = value; }
-        public double Precio { get => precio; set => precio = value; }
-        public int IdTamano { get => idTamano; set => idTamano = value; }
+        public int IdTamano
+        {
+            get
+            {
+                return idTamano;
+            }
+
+            set
+            {
+                idTamano = value;
+            }
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+                nombre = value;
+            }
+        }
+
+        public double Precio
+        {
+            get
+            {
+                return precio;
+            }
+
+            set
+            {
+                precio = value;
+            }
+        }
         #endregion
 
         #region Bob
@@ -28,10 +63,12 @@ namespace CapaNegocio
         #region Constructor
         public Tamano(int idTamano, string nombre, double precio)
         {
-            this.idTamano = idTamano;
-            this.nombre = nombre;
-            this.precio = precio;
+            this.IdTamano = idTamano;
+            this.Nombre = nombre;
+            this.Precio = precio;
         }
+
+       
         #endregion
 
     }

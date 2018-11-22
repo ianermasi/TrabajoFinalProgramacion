@@ -16,19 +16,66 @@ namespace CapaNegocio
         #endregion
 
         #region Propiedades
-        public int IdPproducto { get => idProducto; set => idProducto = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public double Precio { get => precio; set => precio = value; }
-        public int FkTipo { get => fkTipo; set => fkTipo = value; }
+        public int IdProducto
+        {
+            get
+            {
+                return idProducto;
+            }
+
+            set
+            {
+                idProducto = value;
+            }
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+                nombre = value;
+            }
+        }
+
+        public double Precio
+        {
+            get
+            {
+                return precio;
+            }
+
+            set
+            {
+                precio = value;
+            }
+        }
+
+        public int FkTipo
+        {
+            get
+            {
+                return fkTipo;
+            }
+
+            set
+            {
+                fkTipo = value;
+            }
+        }
         #endregion
 
         #region Bob
         public Producto(int id, string nomb, double precio, int fktipo)
         {
-            this.idProducto = id;
-            this.nombre = nomb;
-            this.precio = precio;
-            this.fkTipo = fktipo;
+            this.IdProducto = id;
+            this.Nombre = nomb;
+            this.Precio = precio;
+            this.FkTipo = fktipo;
         }
         #endregion
 

@@ -12,14 +12,47 @@ namespace CapaNegocio
         int idPedido;
         double total;
         DateTime fecha;
-
-      
         #endregion
 
         #region Propiedades
-        public int IdPedido { get => idPedido; set => idPedido = value; }
-        public double Total { get => total; set => total = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public int IdPedido
+        {
+            get
+            {
+                return idPedido;
+            }
+
+            set
+            {
+                idPedido = value;
+            }
+        }
+
+        public double Total
+        {
+            get
+            {
+                return total;
+            }
+
+            set
+            {
+                total = value;
+            }
+        }
+
+        public DateTime Fecha
+        {
+            get
+            {
+                return fecha;
+            }
+
+            set
+            {
+                fecha = value;
+            }
+        }
         #endregion
 
         #region Bob
@@ -28,9 +61,9 @@ namespace CapaNegocio
         #region Constructor
         public Pedido(int idPedido, double total, DateTime fecha)
         {
-            this.idPedido = idPedido;
-            this.total = total;
-            this.fecha = fecha;
+            this.IdPedido = idPedido;
+            this.Total = total;
+            this.Fecha = fecha;
         }
         #endregion
     }

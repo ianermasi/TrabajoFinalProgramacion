@@ -57,8 +57,6 @@
             this.PCBPedido = new System.Windows.Forms.PictureBox();
             this.PBXCerrar = new System.Windows.Forms.PictureBox();
             this.PBXMinimizar = new System.Windows.Forms.PictureBox();
-            this.PBXMaximizar = new System.Windows.Forms.PictureBox();
-            this.PBXRestaurar = new System.Windows.Forms.PictureBox();
             this.PNLTop = new System.Windows.Forms.Panel();
             this.PNLContenedor.SuspendLayout();
             this.PNLMetodoPago.SuspendLayout();
@@ -67,8 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PCBPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBXCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBXMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBXMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBXRestaurar)).BeginInit();
             this.PNLTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +91,7 @@
             this.PNLContenedor.Controls.Add(this.PNLCuotas);
             this.PNLContenedor.Controls.Add(this.PCBPedido);
             this.PNLContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PNLContenedor.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PNLContenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PNLContenedor.Location = new System.Drawing.Point(0, 35);
             this.PNLContenedor.Name = "PNLContenedor";
             this.PNLContenedor.Size = new System.Drawing.Size(1350, 615);
@@ -117,7 +113,7 @@
             this.LBLObservaciones.AutoSize = true;
             this.LBLObservaciones.Location = new System.Drawing.Point(38, 569);
             this.LBLObservaciones.Name = "LBLObservaciones";
-            this.LBLObservaciones.Size = new System.Drawing.Size(124, 17);
+            this.LBLObservaciones.Size = new System.Drawing.Size(114, 20);
             this.LBLObservaciones.TabIndex = 54;
             this.LBLObservaciones.Text = "Observaciones";
             // 
@@ -237,7 +233,7 @@
             // 
             // BTNCancelar
             // 
-            this.BTNCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTNCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
             this.BTNCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNCancelar.FlatAppearance.BorderSize = 0;
@@ -254,7 +250,7 @@
             // 
             // BTNFinalizar
             // 
-            this.BTNFinalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTNFinalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNFinalizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
             this.BTNFinalizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNFinalizar.FlatAppearance.BorderSize = 0;
@@ -285,10 +281,10 @@
             // 
             this.LBLPrecioFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LBLPrecioFinal.AutoSize = true;
-            this.LBLPrecioFinal.Font = new System.Drawing.Font("Insaniburger with Cheese", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLPrecioFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLPrecioFinal.Location = new System.Drawing.Point(1258, 573);
             this.LBLPrecioFinal.Name = "LBLPrecioFinal";
-            this.LBLPrecioFinal.Size = new System.Drawing.Size(46, 23);
+            this.LBLPrecioFinal.Size = new System.Drawing.Size(48, 25);
             this.LBLPrecioFinal.TabIndex = 5;
             this.LBLPrecioFinal.Text = "000";
             // 
@@ -296,10 +292,10 @@
             // 
             this.LBLTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LBLTotal.AutoSize = true;
-            this.LBLTotal.Font = new System.Drawing.Font("Insaniburger with Cheese", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLTotal.Location = new System.Drawing.Point(1182, 573);
             this.LBLTotal.Name = "LBLTotal";
-            this.LBLTotal.Size = new System.Drawing.Size(78, 23);
+            this.LBLTotal.Size = new System.Drawing.Size(86, 25);
             this.LBLTotal.TabIndex = 4;
             this.LBLTotal.Text = "TOTAL:";
             // 
@@ -319,10 +315,10 @@
             // 
             this.RBTNTarjeta.AutoSize = true;
             this.RBTNTarjeta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTNTarjeta.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBTNTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBTNTarjeta.Location = new System.Drawing.Point(287, 3);
             this.RBTNTarjeta.Name = "RBTNTarjeta";
-            this.RBTNTarjeta.Size = new System.Drawing.Size(88, 21);
+            this.RBTNTarjeta.Size = new System.Drawing.Size(76, 24);
             this.RBTNTarjeta.TabIndex = 3;
             this.RBTNTarjeta.TabStop = true;
             this.RBTNTarjeta.Text = "Tarjeta";
@@ -332,10 +328,10 @@
             // 
             this.RBTNEfectivo.AutoSize = true;
             this.RBTNEfectivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTNEfectivo.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBTNEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBTNEfectivo.Location = new System.Drawing.Point(17, 3);
             this.RBTNEfectivo.Name = "RBTNEfectivo";
-            this.RBTNEfectivo.Size = new System.Drawing.Size(92, 21);
+            this.RBTNEfectivo.Size = new System.Drawing.Size(84, 24);
             this.RBTNEfectivo.TabIndex = 2;
             this.RBTNEfectivo.TabStop = true;
             this.RBTNEfectivo.Text = "Efectivo";
@@ -372,10 +368,10 @@
             // 
             this.RBTN12Cuotas.AutoSize = true;
             this.RBTN12Cuotas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTN12Cuotas.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBTN12Cuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBTN12Cuotas.Location = new System.Drawing.Point(12, 145);
             this.RBTN12Cuotas.Name = "RBTN12Cuotas";
-            this.RBTN12Cuotas.Size = new System.Drawing.Size(102, 21);
+            this.RBTN12Cuotas.Size = new System.Drawing.Size(100, 24);
             this.RBTN12Cuotas.TabIndex = 4;
             this.RBTN12Cuotas.TabStop = true;
             this.RBTN12Cuotas.Text = "12 Cuotas";
@@ -385,10 +381,10 @@
             // 
             this.RBTN6Cuotas.AutoSize = true;
             this.RBTN6Cuotas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTN6Cuotas.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBTN6Cuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBTN6Cuotas.Location = new System.Drawing.Point(12, 115);
             this.RBTN6Cuotas.Name = "RBTN6Cuotas";
-            this.RBTN6Cuotas.Size = new System.Drawing.Size(96, 21);
+            this.RBTN6Cuotas.Size = new System.Drawing.Size(91, 24);
             this.RBTN6Cuotas.TabIndex = 3;
             this.RBTN6Cuotas.TabStop = true;
             this.RBTN6Cuotas.Text = "6 Cuotas";
@@ -398,10 +394,10 @@
             // 
             this.RBTN3Cuotas.AutoSize = true;
             this.RBTN3Cuotas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTN3Cuotas.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBTN3Cuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBTN3Cuotas.Location = new System.Drawing.Point(12, 85);
             this.RBTN3Cuotas.Name = "RBTN3Cuotas";
-            this.RBTN3Cuotas.Size = new System.Drawing.Size(96, 21);
+            this.RBTN3Cuotas.Size = new System.Drawing.Size(91, 24);
             this.RBTN3Cuotas.TabIndex = 2;
             this.RBTN3Cuotas.TabStop = true;
             this.RBTN3Cuotas.Text = "3 Cuotas";
@@ -411,10 +407,10 @@
             // 
             this.RBTNUnPago.AutoSize = true;
             this.RBTNUnPago.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTNUnPago.Font = new System.Drawing.Font("Insaniburger with Cheese", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBTNUnPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBTNUnPago.Location = new System.Drawing.Point(12, 55);
             this.RBTNUnPago.Name = "RBTNUnPago";
-            this.RBTNUnPago.Size = new System.Drawing.Size(91, 21);
+            this.RBTNUnPago.Size = new System.Drawing.Size(88, 24);
             this.RBTNUnPago.TabIndex = 1;
             this.RBTNUnPago.TabStop = true;
             this.RBTNUnPago.Text = "Un pago";
@@ -423,10 +419,10 @@
             // LBLCantCuotas
             // 
             this.LBLCantCuotas.AutoSize = true;
-            this.LBLCantCuotas.Font = new System.Drawing.Font("Insaniburger with Cheese", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLCantCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLCantCuotas.Location = new System.Drawing.Point(-5, 10);
             this.LBLCantCuotas.Name = "LBLCantCuotas";
-            this.LBLCantCuotas.Size = new System.Drawing.Size(267, 28);
+            this.LBLCantCuotas.Size = new System.Drawing.Size(238, 30);
             this.LBLCantCuotas.TabIndex = 0;
             this.LBLCantCuotas.Text = "Cantidad de Cuotas";
             // 
@@ -437,7 +433,7 @@
             this.PCBPedido.Image = ((System.Drawing.Image)(resources.GetObject("PCBPedido.Image")));
             this.PCBPedido.Location = new System.Drawing.Point(0, -1);
             this.PCBPedido.Name = "PCBPedido";
-            this.PCBPedido.Size = new System.Drawing.Size(1414, 154);
+            this.PCBPedido.Size = new System.Drawing.Size(1600, 154);
             this.PCBPedido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.PCBPedido.TabIndex = 0;
             this.PCBPedido.TabStop = false;
@@ -460,7 +456,7 @@
             this.PBXMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PBXMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PBXMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("PBXMinimizar.Image")));
-            this.PBXMinimizar.Location = new System.Drawing.Point(1251, 4);
+            this.PBXMinimizar.Location = new System.Drawing.Point(1281, 4);
             this.PBXMinimizar.Name = "PBXMinimizar";
             this.PBXMinimizar.Size = new System.Drawing.Size(25, 25);
             this.PBXMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -468,38 +464,9 @@
             this.PBXMinimizar.TabStop = false;
             this.PBXMinimizar.Click += new System.EventHandler(this.PBXMinimizar_Click);
             // 
-            // PBXMaximizar
-            // 
-            this.PBXMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBXMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PBXMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("PBXMaximizar.Image")));
-            this.PBXMaximizar.Location = new System.Drawing.Point(1282, 4);
-            this.PBXMaximizar.Name = "PBXMaximizar";
-            this.PBXMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.PBXMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBXMaximizar.TabIndex = 6;
-            this.PBXMaximizar.TabStop = false;
-            this.PBXMaximizar.Click += new System.EventHandler(this.PBXMaximizar_Click);
-            // 
-            // PBXRestaurar
-            // 
-            this.PBXRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBXRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PBXRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("PBXRestaurar.Image")));
-            this.PBXRestaurar.Location = new System.Drawing.Point(1282, 4);
-            this.PBXRestaurar.Name = "PBXRestaurar";
-            this.PBXRestaurar.Size = new System.Drawing.Size(25, 25);
-            this.PBXRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PBXRestaurar.TabIndex = 7;
-            this.PBXRestaurar.TabStop = false;
-            this.PBXRestaurar.Visible = false;
-            this.PBXRestaurar.Click += new System.EventHandler(this.PBXRestaurar_Click);
-            // 
             // PNLTop
             // 
             this.PNLTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
-            this.PNLTop.Controls.Add(this.PBXRestaurar);
-            this.PNLTop.Controls.Add(this.PBXMaximizar);
             this.PNLTop.Controls.Add(this.PBXMinimizar);
             this.PNLTop.Controls.Add(this.PBXCerrar);
             this.PNLTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -520,6 +487,7 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Burger KING";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PNLContenedor.ResumeLayout(false);
             this.PNLContenedor.PerformLayout();
             this.PNLMetodoPago.ResumeLayout(false);
@@ -530,8 +498,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PCBPedido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBXCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBXMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBXMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBXRestaurar)).EndInit();
             this.PNLTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -543,8 +509,6 @@
         private System.Windows.Forms.PictureBox PCBPedido;
         private System.Windows.Forms.PictureBox PBXCerrar;
         private System.Windows.Forms.PictureBox PBXMinimizar;
-        private System.Windows.Forms.PictureBox PBXMaximizar;
-        private System.Windows.Forms.PictureBox PBXRestaurar;
         private System.Windows.Forms.Panel PNLTop;
         private System.Windows.Forms.Panel PNLCuotas;
         private System.Windows.Forms.Label LBLCantCuotas;

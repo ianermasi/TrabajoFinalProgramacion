@@ -11,13 +11,34 @@ namespace CapaNegocio
         #region Variables Miembro
         int idTipo;
         string nombre;
-
-       
         #endregion
 
         #region Propiedades
-        public string Nombre { get => nombre; set => nombre = value; }
-        public int IdTipo { get => idTipo; set => idTipo = value; }
+        public int IdTipo
+        {
+            get
+            {
+                return idTipo;
+            }
+
+            set
+            {
+                idTipo = value;
+            }
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+                nombre = value;
+            }
+        }
         #endregion
 
         #region Bob
@@ -26,8 +47,8 @@ namespace CapaNegocio
         #region Constructor
         public Tipo(int idTipo, string nombre)
         {
-            this.idTipo = idTipo;
-            this.nombre = nombre;
+            this.IdTipo = idTipo;
+            this.Nombre = nombre;
         }
         #endregion
 

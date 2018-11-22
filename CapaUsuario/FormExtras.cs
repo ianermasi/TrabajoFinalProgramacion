@@ -15,6 +15,29 @@ namespace CapaUsuario
         public FormExtras()
         {
             InitializeComponent();
+            CargarImagenes();
         }
-    }
+
+        private void Aros_Cebolla_MouseClick(object sender, MouseEventArgs e)
+        {
+            foreach (object x in PNLContenedor.Controls)
+            {
+                if (x is Panel)
+                    (x as Panel).BackColor = Color.White;
+            }
+            (sender as Panel).BackColor = Color.LightBlue;
+            LBLNombre.Text = (sender as Panel).Name;
+        }
+        private void CargarImagenes()
+        {
+            Aros_Cebolla.BackgroundImage = IMLExtras.Images[0];
+            Ensalada_Caesar.BackgroundImage = IMLExtras.Images[1];
+            Ensalada_Gourmet.BackgroundImage = IMLExtras.Images[2];
+            Nuggets.BackgroundImage = IMLExtras.Images[3];
+            Snack.BackgroundImage = IMLExtras.Images[4];
+            Papas_Fritas.BackgroundImage = IMLExtras.Images[5];
+            Tomatitos.BackgroundImage = IMLExtras.Images[6];
+            Papas_Con_Cheddar.BackgroundImage = IMLExtras.Images[7];
+        }
+        }
 }
