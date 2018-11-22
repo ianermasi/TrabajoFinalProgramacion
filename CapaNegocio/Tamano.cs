@@ -12,6 +12,8 @@ namespace CapaNegocio
         int idTamano;
         string nombre;
         double precio;
+
+        
         #endregion
 
         #region Propiedades
@@ -24,6 +26,12 @@ namespace CapaNegocio
         #endregion
 
         #region Constructor
+        public Tamano(int idTamano, string nombre, double precio)
+        {
+            this.idTamano = idTamano;
+            this.nombre = nombre;
+            this.precio = precio;
+        }
         #endregion
 
     }

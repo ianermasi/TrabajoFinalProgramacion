@@ -12,6 +12,8 @@ namespace CapaNegocio
         int idPedido;
         double total;
         DateTime fecha;
+
+      
         #endregion
 
         #region Propiedades
@@ -24,6 +26,12 @@ namespace CapaNegocio
         #endregion
 
         #region Constructor
+        public Pedido(int idPedido, double total, DateTime fecha)
+        {
+            this.idPedido = idPedido;
+            this.total = total;
+            this.fecha = fecha;
+        }
         #endregion
     }
 }
