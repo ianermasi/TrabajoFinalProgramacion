@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaNegocio;
 namespace CapaUsuario
 {
     public partial class FormPostres : Form
     {
+        double totaal=0;
         public FormPostres()
         {
             InitializeComponent();
@@ -68,5 +69,40 @@ namespace CapaUsuario
                 LBLNombre.Text = LBLNombre.Text + "" + x;
             }
         }
+
+        private void BTNConfirmar_Click(object sender, EventArgs e)
+        {
+            string tam = "";
+            foreach (object x in PNLOpciones.Controls)
+            {
+                if (x is RadioButton)
+                    if ((x as RadioButton).Checked == true)
+                    {
+                        tam = (x as RadioButton).Name;
+                    }
+            }
+            if (tam != "")
+            {
+                foreach (object x in PNLContenedor.Controls)
+                {
+                    if (x is Panel)
+                    {
+                        if ((x as Panel).BackColor != Color.White)
+                        {
+                            Detalle a = new Detalle();
+                            a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), Tamano.BuscarPorNombre(tam).IdTamano, Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name).Precio, Tamano.BuscarPorNombre(tam).Precio));
+                            a.Guardar();
+                            totaal = a.Precio1;
+
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Eleji un tamaño >:c");
+            }
+        }
+
     }
 }

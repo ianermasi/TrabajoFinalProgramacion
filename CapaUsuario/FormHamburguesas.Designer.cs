@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHamburguesas));
             this.PNLContenedor = new System.Windows.Forms.Panel();
+            this.BTNConfirmar = new System.Windows.Forms.Button();
             this.LBLNombre = new System.Windows.Forms.Label();
             this.Extra_Burguer = new System.Windows.Forms.Panel();
             this.Whopper_Extreme = new System.Windows.Forms.Panel();
@@ -56,7 +57,6 @@
             this.Atomic = new System.Windows.Forms.Panel();
             this.Long_Classic = new System.Windows.Forms.Panel();
             this.IMLHamburguesa = new System.Windows.Forms.ImageList(this.components);
-            this.BTNConfirmar = new System.Windows.Forms.Button();
             this.PNLContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,24 @@
             this.PNLContenedor.Name = "PNLContenedor";
             this.PNLContenedor.Size = new System.Drawing.Size(1042, 435);
             this.PNLContenedor.TabIndex = 7;
+            // 
+            // BTNConfirmar
+            // 
+            this.BTNConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTNConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
+            this.BTNConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNConfirmar.FlatAppearance.BorderSize = 0;
+            this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
+            this.BTNConfirmar.Location = new System.Drawing.Point(875, 400);
+            this.BTNConfirmar.Name = "BTNConfirmar";
+            this.BTNConfirmar.Size = new System.Drawing.Size(162, 30);
+            this.BTNConfirmar.TabIndex = 55;
+            this.BTNConfirmar.Text = "Confirmar";
+            this.BTNConfirmar.UseVisualStyleBackColor = false;
+            this.BTNConfirmar.Click += new System.EventHandler(this.BTNConfirmar_Click);
             // 
             // LBLNombre
             // 
@@ -340,23 +358,6 @@
             this.IMLHamburguesa.Images.SetKeyName(20, "Long-Rodeo-BBQ5401.png");
             this.IMLHamburguesa.Images.SetKeyName(21, "whopper.png");
             this.IMLHamburguesa.Images.SetKeyName(22, "whopper_extreme-high.png");
-            // 
-            // BTNConfirmar
-            // 
-            this.BTNConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTNConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
-            this.BTNConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNConfirmar.FlatAppearance.BorderSize = 0;
-            this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
-            this.BTNConfirmar.Location = new System.Drawing.Point(875, 400);
-            this.BTNConfirmar.Name = "BTNConfirmar";
-            this.BTNConfirmar.Size = new System.Drawing.Size(162, 30);
-            this.BTNConfirmar.TabIndex = 55;
-            this.BTNConfirmar.Text = "Confirmar";
-            this.BTNConfirmar.UseVisualStyleBackColor = false;
             // 
             // FormHamburguesas
             // 
