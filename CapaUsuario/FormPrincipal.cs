@@ -129,7 +129,7 @@ namespace CapaUsuario
             DGVPedido.DataSource = null;
             Pedido.BorrarPedido();
         }
-
+        
         public void ActualizarDGV()
         {
             DGVPedido.DataSource = null;
@@ -137,5 +137,30 @@ namespace CapaUsuario
             LBLTotal.Text = (FormBebidas.totaal + FormExtras.totaal + FormHamburguesas.totaal + FormPostres.totaal).ToString(); ;
         }
 
+        private void NUDRecibido_Leave(object sender, EventArgs e)
+        {
+            double resultado=0;
+            try
+            {
+                if(Int32.Parse(LBLTotal.Text)*1 == 0)
+                resultado = (double)NUDRecibido.Value - Int32.Parse(LBLTotal.Text);
+                else
+                {
+                    MessageBox.Show("Por favor seleccione un producto");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            if (resultado >= 0)
+            {
+                LBLDevolverNumero.Text = resultado.ToString();
+            }
+            else
+            {
+                MessageBox.Show("faltan $" + resultado.ToString().Split('-')[1]);
+            }
+        }
     }
 }
