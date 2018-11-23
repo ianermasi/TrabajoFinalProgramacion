@@ -20,8 +20,10 @@ namespace CapaUsuario
             PNLCuotas.Visible = false;
             PNLEfectivo.Visible = false;
             Pedido p = new Pedido(0,DateTime.Today);
-            p.Guardar();
-            
+            //p.Guardar();
+            ActualizarDGV();
+
+
         }
 
         private void PBXCerrar_Click(object sender, EventArgs e)
@@ -107,6 +109,26 @@ namespace CapaUsuario
         private void TXTObservaciones_Leave(object sender, EventArgs e)
         {
             observ = TXTObservaciones.Text;
+        }
+
+        private void BTNCancelar_Click(object sender, EventArgs e)
+        {
+            PNLEfectivo.Visible = false;
+            PNLCuotas.Visible = false;
+            RBTNEfectivo.Checked = false;
+            RBTNTarjeta.Checked = false;
+            NUDRecibido.Value = 0;
+            RBTNUnPago.Checked = false;
+            RBTN3Cuotas.Checked = false;
+            RBTN6Cuotas.Checked = false;
+            RBTN12Cuotas.Checked = false;
+            TXTObservaciones.Text = "";
+        }
+
+        private void ActualizarDGV()
+        {
+            DGVPedido.DataSource = null;
+            DGVPedido.DataSource = Detalle.ListaDetalles().ToString();
         }
     }
 }
