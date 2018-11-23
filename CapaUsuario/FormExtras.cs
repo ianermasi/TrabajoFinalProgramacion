@@ -20,6 +20,7 @@ namespace CapaUsuario
 
         private void Aros_Cebolla_MouseClick(object sender, MouseEventArgs e)
         {
+            LBLNombre.Text = "";
             foreach (object x in PNLContenedor.Controls)
             {
                 if (x is Panel)

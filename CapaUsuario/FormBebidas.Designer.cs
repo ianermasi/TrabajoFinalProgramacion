@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBebidas));
             this.PNLContenedor = new System.Windows.Forms.Panel();
+            this.BTNConfirmar = new System.Windows.Forms.Button();
             this.Sprite_Light = new System.Windows.Forms.Panel();
             this.Sprite = new System.Windows.Forms.Panel();
             this.Fanta = new System.Windows.Forms.Panel();
@@ -39,11 +40,10 @@
             this.Aquarius = new System.Windows.Forms.Panel();
             this.PNLOpciones = new System.Windows.Forms.Panel();
             this.LBLTamaño = new System.Windows.Forms.Label();
-            this.RBTNGrande = new System.Windows.Forms.RadioButton();
-            this.RBTNMediano = new System.Windows.Forms.RadioButton();
-            this.RBTNPequeño = new System.Windows.Forms.RadioButton();
+            this.Grande = new System.Windows.Forms.RadioButton();
+            this.Mediano = new System.Windows.Forms.RadioButton();
+            this.Pequeño = new System.Windows.Forms.RadioButton();
             this.IMLBebidas = new System.Windows.Forms.ImageList(this.components);
-            this.BTNConfirmar = new System.Windows.Forms.Button();
             this.PNLContenedor.SuspendLayout();
             this.PNLOpciones.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,24 @@
             this.PNLContenedor.Name = "PNLContenedor";
             this.PNLContenedor.Size = new System.Drawing.Size(829, 367);
             this.PNLContenedor.TabIndex = 0;
+            // 
+            // BTNConfirmar
+            // 
+            this.BTNConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTNConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
+            this.BTNConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNConfirmar.FlatAppearance.BorderSize = 0;
+            this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
+            this.BTNConfirmar.Location = new System.Drawing.Point(662, 332);
+            this.BTNConfirmar.Name = "BTNConfirmar";
+            this.BTNConfirmar.Size = new System.Drawing.Size(162, 30);
+            this.BTNConfirmar.TabIndex = 56;
+            this.BTNConfirmar.Text = "Confirmar";
+            this.BTNConfirmar.UseVisualStyleBackColor = false;
+            this.BTNConfirmar.Click += new System.EventHandler(this.BTNConfirmar_Click);
             // 
             // Sprite_Light
             // 
@@ -121,9 +139,9 @@
             this.PNLOpciones.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PNLOpciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PNLOpciones.Controls.Add(this.LBLTamaño);
-            this.PNLOpciones.Controls.Add(this.RBTNGrande);
-            this.PNLOpciones.Controls.Add(this.RBTNMediano);
-            this.PNLOpciones.Controls.Add(this.RBTNPequeño);
+            this.PNLOpciones.Controls.Add(this.Grande);
+            this.PNLOpciones.Controls.Add(this.Mediano);
+            this.PNLOpciones.Controls.Add(this.Pequeño);
             this.PNLOpciones.Location = new System.Drawing.Point(553, 215);
             this.PNLOpciones.Name = "PNLOpciones";
             this.PNLOpciones.Size = new System.Drawing.Size(107, 147);
@@ -141,50 +159,50 @@
             this.LBLTamaño.TabIndex = 15;
             this.LBLTamaño.Text = "Tamaño";
             // 
-            // RBTNGrande
+            // Grande
             // 
-            this.RBTNGrande.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.Grande.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RBTNGrande.AutoSize = true;
-            this.RBTNGrande.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTNGrande.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTNGrande.Location = new System.Drawing.Point(3, 100);
-            this.RBTNGrande.Name = "RBTNGrande";
-            this.RBTNGrande.Size = new System.Drawing.Size(81, 24);
-            this.RBTNGrande.TabIndex = 4;
-            this.RBTNGrande.TabStop = true;
-            this.RBTNGrande.Text = "Grande";
-            this.RBTNGrande.UseVisualStyleBackColor = true;
+            this.Grande.AutoSize = true;
+            this.Grande.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Grande.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grande.Location = new System.Drawing.Point(3, 100);
+            this.Grande.Name = "Grande";
+            this.Grande.Size = new System.Drawing.Size(81, 24);
+            this.Grande.TabIndex = 4;
+            this.Grande.TabStop = true;
+            this.Grande.Text = "Grande";
+            this.Grande.UseVisualStyleBackColor = true;
             // 
-            // RBTNMediano
+            // Mediano
             // 
-            this.RBTNMediano.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.Mediano.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RBTNMediano.AutoSize = true;
-            this.RBTNMediano.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTNMediano.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTNMediano.Location = new System.Drawing.Point(3, 73);
-            this.RBTNMediano.Name = "RBTNMediano";
-            this.RBTNMediano.Size = new System.Drawing.Size(88, 24);
-            this.RBTNMediano.TabIndex = 3;
-            this.RBTNMediano.TabStop = true;
-            this.RBTNMediano.Text = "Mediano";
-            this.RBTNMediano.UseVisualStyleBackColor = true;
+            this.Mediano.AutoSize = true;
+            this.Mediano.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Mediano.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mediano.Location = new System.Drawing.Point(3, 73);
+            this.Mediano.Name = "Mediano";
+            this.Mediano.Size = new System.Drawing.Size(88, 24);
+            this.Mediano.TabIndex = 3;
+            this.Mediano.TabStop = true;
+            this.Mediano.Text = "Mediano";
+            this.Mediano.UseVisualStyleBackColor = true;
             // 
-            // RBTNPequeño
+            // Pequeño
             // 
-            this.RBTNPequeño.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Pequeño.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RBTNPequeño.AutoSize = true;
-            this.RBTNPequeño.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RBTNPequeño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBTNPequeño.Location = new System.Drawing.Point(3, 49);
-            this.RBTNPequeño.Name = "RBTNPequeño";
-            this.RBTNPequeño.Size = new System.Drawing.Size(91, 24);
-            this.RBTNPequeño.TabIndex = 2;
-            this.RBTNPequeño.TabStop = true;
-            this.RBTNPequeño.Text = "Pequeño";
-            this.RBTNPequeño.UseVisualStyleBackColor = true;
+            this.Pequeño.AutoSize = true;
+            this.Pequeño.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pequeño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pequeño.Location = new System.Drawing.Point(3, 49);
+            this.Pequeño.Name = "Pequeño";
+            this.Pequeño.Size = new System.Drawing.Size(91, 24);
+            this.Pequeño.TabIndex = 2;
+            this.Pequeño.TabStop = true;
+            this.Pequeño.Text = "Pequeño";
+            this.Pequeño.UseVisualStyleBackColor = true;
             // 
             // IMLBebidas
             // 
@@ -196,23 +214,6 @@
             this.IMLBebidas.Images.SetKeyName(3, "Fanta.png");
             this.IMLBebidas.Images.SetKeyName(4, "Sprite.png");
             this.IMLBebidas.Images.SetKeyName(5, "Sprite_Zero.png");
-            // 
-            // BTNConfirmar
-            // 
-            this.BTNConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTNConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
-            this.BTNConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNConfirmar.FlatAppearance.BorderSize = 0;
-            this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
-            this.BTNConfirmar.Location = new System.Drawing.Point(662, 332);
-            this.BTNConfirmar.Name = "BTNConfirmar";
-            this.BTNConfirmar.Size = new System.Drawing.Size(162, 30);
-            this.BTNConfirmar.TabIndex = 56;
-            this.BTNConfirmar.Text = "Confirmar";
-            this.BTNConfirmar.UseVisualStyleBackColor = false;
             // 
             // FormBebidas
             // 
@@ -235,9 +236,9 @@
         private System.Windows.Forms.Panel PNLContenedor;
         private System.Windows.Forms.Panel PNLOpciones;
         private System.Windows.Forms.Label LBLTamaño;
-        private System.Windows.Forms.RadioButton RBTNGrande;
-        private System.Windows.Forms.RadioButton RBTNMediano;
-        private System.Windows.Forms.RadioButton RBTNPequeño;
+        private System.Windows.Forms.RadioButton Grande;
+        private System.Windows.Forms.RadioButton Mediano;
+        private System.Windows.Forms.RadioButton Pequeño;
         private System.Windows.Forms.Panel Sprite_Light;
         private System.Windows.Forms.Panel Sprite;
         private System.Windows.Forms.Panel Fanta;

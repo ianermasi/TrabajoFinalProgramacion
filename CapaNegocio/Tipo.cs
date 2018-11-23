@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    class Tipo
+    public class Tipo
     {
         #region Variables Miembro
         int idTipo;
@@ -42,14 +42,20 @@ namespace CapaNegocio
         #endregion
 
         #region Bob
-        #endregion
-
-        #region Constructor
         public Tipo(int idTipo, string nombre)
         {
             this.IdTipo = idTipo;
             this.Nombre = nombre;
         }
+        public Tipo()
+        {
+            this.IdTipo = 0;
+            this.Nombre = "";
+        }
+        #endregion
+
+        #region Constructor
+
         #endregion
 
     }

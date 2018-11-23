@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CapaDato;
 namespace CapaNegocio
 {
-    class Tamano
+    public class Tamano
     {
         #region Variables Miembro
         int idTamano;
@@ -58,9 +58,6 @@ namespace CapaNegocio
         #endregion
 
         #region Bob
-        #endregion
-
-        #region Constructor
         public Tamano(int idTamano, string nombre, double precio)
         {
             this.IdTamano = idTamano;
@@ -68,7 +65,30 @@ namespace CapaNegocio
             this.Precio = precio;
         }
 
-       
+        public Tamano()
+        {
+            this.IdTamano = 0;
+            this.Nombre = "";
+            this.Precio = 0;
+        }
+        #endregion
+
+        #region Meto2
+
+        public static Tamano BuscarPorNombre(string buscado)
+        {
+            Tamano resultado = new Tamano();
+            dataDataContext dtc = new dataDataContext(Conexion.DarStringConexion());
+            var cons = from x in dtc.ETamano
+                       where x.nombre.Trim().ToLower().Equals(buscado.ToLower().Trim())
+                       select x;
+            foreach (ETamano x in cons)
+            {
+                resultado = new Tamano(x.idTamano, x.nombre, (double)x.precio);
+            }
+            return resultado;
+        }
+
         #endregion
 
     }

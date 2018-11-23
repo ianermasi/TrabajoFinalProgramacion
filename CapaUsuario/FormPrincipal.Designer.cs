@@ -201,6 +201,7 @@
             this.TXTObservaciones.Name = "TXTObservaciones";
             this.TXTObservaciones.Size = new System.Drawing.Size(352, 26);
             this.TXTObservaciones.TabIndex = 52;
+            this.TXTObservaciones.Leave += new System.EventHandler(this.TXTObservaciones_Leave);
             // 
             // BTNPostres
             // 
@@ -210,7 +211,7 @@
             this.BTNPostres.FlatAppearance.BorderSize = 0;
             this.BTNPostres.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNPostres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNPostres.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNPostres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNPostres.ForeColor = System.Drawing.Color.White;
             this.BTNPostres.Location = new System.Drawing.Point(713, 153);
             this.BTNPostres.Name = "BTNPostres";
@@ -228,7 +229,7 @@
             this.BTNExtras.FlatAppearance.BorderSize = 0;
             this.BTNExtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNExtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNExtras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNExtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNExtras.ForeColor = System.Drawing.Color.White;
             this.BTNExtras.Location = new System.Drawing.Point(545, 153);
             this.BTNExtras.Name = "BTNExtras";
@@ -247,7 +248,7 @@
             this.BTNHamburguesas.FlatAppearance.BorderSize = 0;
             this.BTNHamburguesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNHamburguesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNHamburguesas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNHamburguesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNHamburguesas.ForeColor = System.Drawing.Color.White;
             this.BTNHamburguesas.Location = new System.Drawing.Point(377, 153);
             this.BTNHamburguesas.Name = "BTNHamburguesas";
@@ -264,7 +265,7 @@
             this.BTNBebidas.FlatAppearance.BorderSize = 0;
             this.BTNBebidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNBebidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNBebidas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNBebidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNBebidas.ForeColor = System.Drawing.Color.White;
             this.BTNBebidas.Location = new System.Drawing.Point(209, 153);
             this.BTNBebidas.Name = "BTNBebidas";
@@ -281,7 +282,7 @@
             this.BTNCombos.FlatAppearance.BorderSize = 0;
             this.BTNCombos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNCombos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNCombos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNCombos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNCombos.ForeColor = System.Drawing.Color.White;
             this.BTNCombos.Location = new System.Drawing.Point(41, 153);
             this.BTNCombos.Name = "BTNCombos";
@@ -299,7 +300,7 @@
             this.BTNCancelar.FlatAppearance.BorderSize = 0;
             this.BTNCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNCancelar.ForeColor = System.Drawing.Color.White;
             this.BTNCancelar.Location = new System.Drawing.Point(986, 569);
             this.BTNCancelar.Name = "BTNCancelar";
@@ -316,7 +317,7 @@
             this.BTNFinalizar.FlatAppearance.BorderSize = 0;
             this.BTNFinalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNFinalizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNFinalizar.ForeColor = System.Drawing.Color.White;
             this.BTNFinalizar.Location = new System.Drawing.Point(1084, 569);
             this.BTNFinalizar.Name = "BTNFinalizar";

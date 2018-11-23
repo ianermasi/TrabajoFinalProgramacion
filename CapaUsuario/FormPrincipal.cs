@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CapaNegocio;
 namespace CapaUsuario
 {
     public partial class FormPrincipal : Form
     {
+        public static string observ = "";
+        public static double total = 0;
         public FormPrincipal()
         {
             InitializeComponent();
             PNLCuotas.Visible = false;
             PNLEfectivo.Visible = false;
+            Pedido p = new Pedido(0,DateTime.Today);
+            p.Guardar();
+            
         }
 
         private void PBXCerrar_Click(object sender, EventArgs e)
@@ -84,9 +89,24 @@ namespace CapaUsuario
             }
         }
 
+        public static void ModificarTotal(double c)
+        {
+            total = c;
+        }
+
         private void PNLOcultar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public static string ObtenerObservaciones()
+        {
+            return observ;
+        }
+
+        private void TXTObservaciones_Leave(object sender, EventArgs e)
+        {
+            observ = TXTObservaciones.Text;
         }
     }
 }

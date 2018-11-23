@@ -49,6 +49,7 @@ namespace CapaUsuario
 
         private void Cucuruchones_MouseClick(object sender, MouseEventArgs e)
         {
+            LBLNombre.Text = "";
             foreach (object x in PNLContenedor.Controls)
             {
                 if (x is Panel)

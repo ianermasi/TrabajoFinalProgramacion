@@ -47,6 +47,7 @@ namespace CapaUsuario
 
         private void PNLImagen1_MouseClick(object sender, MouseEventArgs e)
         {
+            LBLNombre.Text = "";
             foreach (object x in PNLProductosCombos.Controls)
             {
                 if (x is Panel)
