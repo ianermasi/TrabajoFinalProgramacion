@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSVentasHoy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSVentasHoy.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormBebidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +99,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DSVentasHoy.xsc">
+      <DependentUpon>DSVentasHoy.xsd</DependentUpon>
+    </None>
+    <None Include="DSVentasHoy.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSVentasHoy.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSVentasHoy.xss">
+      <DependentUpon>DSVentasHoy.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Block Berthold BQ Regular.otf" />
     <None Include="Resources\Insanibc.ttf" />
   </ItemGroup>
