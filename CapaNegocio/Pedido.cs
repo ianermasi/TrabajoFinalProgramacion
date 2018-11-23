@@ -112,9 +112,10 @@ namespace CapaNegocio
             return resultado;
         }
 
-        public static double calcularTotal(Producto producto, int idTamano)
+        public static double calcularTotal(double producto, double tamano)
         {
-            return 1;
+
+            return producto + tamano;
         }
         #endregion
     }

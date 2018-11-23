@@ -13,6 +13,7 @@ namespace CapaUsuario
 {
     public partial class FormHamburguesas : Form
     {
+        double totaal=0;
         public FormHamburguesas()
         {
             InitializeComponent();
@@ -67,5 +68,27 @@ namespace CapaUsuario
             }
 
         }
+
+        private void BTNConfirmar_Click(object sender, EventArgs e)
+        {
+
+                foreach (object x in PNLContenedor.Controls)
+                {
+                    if (x is Panel)
+                    {
+                        if ((x as Panel).BackColor != Color.White)
+                        {
+                            Detalle a = new Detalle();
+                            a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), 0 , Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name).Precio, Tamano.BuscarPorNombre("nada").Precio));
+                            a.Guardar();
+                            totaal = a.Precio1;
+
+                        }
+                    }
+                }
+            
+           
+        }
+
     }
 }

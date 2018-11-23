@@ -81,7 +81,7 @@
             this.BTNConfirmar.FlatAppearance.BorderSize = 0;
             this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
             this.BTNConfirmar.Location = new System.Drawing.Point(778, 332);
             this.BTNConfirmar.Name = "BTNConfirmar";
@@ -89,6 +89,7 @@
             this.BTNConfirmar.TabIndex = 55;
             this.BTNConfirmar.Text = "Confirmar";
             this.BTNConfirmar.UseVisualStyleBackColor = false;
+            this.BTNConfirmar.Click += new System.EventHandler(this.BTNConfirmar_Click);
             // 
             // Papas_Con_Cheddar
             // 
