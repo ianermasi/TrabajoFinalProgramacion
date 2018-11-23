@@ -117,6 +117,27 @@ namespace CapaNegocio
 
             return producto + tamano;
         }
+
+        public static void BorrarPedido()
+        {
+                int idd = Pedido.ObtenerPedido().idPedido;
+                dataDataContext dtc = new dataDataContext(Conexion.DarStringConexion());
+                var cons = from x1 in dtc.EPedido
+                           where x1.idPedido == idd
+                           select x1;
+
+            var cons2 = from x2 in dtc.EDetalle
+                        where x2.fkPedido == idd
+                        select x2;
+
+            dtc.EPedido.DeleteOnSubmit(cons.First());
+            
+            foreach (EDetalle x in cons2)
+            { 
+                dtc.EDetalle.DeleteOnSubmit(x);
+            }
+            dtc.SubmitChanges();
+        }
         #endregion
     }
 }

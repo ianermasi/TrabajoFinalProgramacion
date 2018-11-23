@@ -14,12 +14,13 @@ namespace CapaUsuario
     {
         public static string observ = "";
         public static double total = 0;
+        Pedido p;
         public FormPrincipal()
         {
             InitializeComponent();
             PNLCuotas.Visible = false;
             PNLEfectivo.Visible = false;
-            Pedido p = new Pedido(0,DateTime.Today);
+           p = new Pedido(0,DateTime.Today);
             p.Guardar();
             ActualizarDGV();
 
@@ -125,6 +126,8 @@ namespace CapaUsuario
             RBTN6Cuotas.Checked = false;
             RBTN12Cuotas.Checked = false;
             TXTObservaciones.Text = "";
+            DGVPedido.DataSource = null;
+            Pedido.BorrarPedido();
         }
 
         public void ActualizarDGV()
