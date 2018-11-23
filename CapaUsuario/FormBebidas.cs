@@ -12,6 +12,7 @@ namespace CapaUsuario
 {
     public partial class FormBebidas : Form
     {
+        public double totaal;
         public FormBebidas()
         {
             InitializeComponent();
@@ -69,9 +70,10 @@ namespace CapaUsuario
                     if ((x as Panel).BackColor != Color.White)
                  {
                               Detalle a = new Detalle();
-                            a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), Tamano.BuscarPorNombre(tam).IdTamano, Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name), Tamano.BuscarPorNombre(tam).IdTamano));
+                            a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), Tamano.BuscarPorNombre(tam).IdTamano, Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name).Precio, Tamano.BuscarPorNombre(tam).Precio));
                              a.Guardar();
-                            FormPrincipal.ModificarTotal(a.Precio1);
+                            totaal = a.Precio1;
+                            
                         }
             }
            }
