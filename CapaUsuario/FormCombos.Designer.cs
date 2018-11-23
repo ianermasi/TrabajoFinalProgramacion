@@ -30,31 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCombos));
-            this.PNLProductosCombos = new System.Windows.Forms.Panel();
-            this.Extra_Burguer = new System.Windows.Forms.Panel();
-            this.Whopper_Extreme = new System.Windows.Forms.Panel();
-            this.Hamburguesa_Simple = new System.Windows.Forms.Panel();
-            this.Whopper = new System.Windows.Forms.Panel();
-            this.Long_Clasico = new System.Windows.Forms.Panel();
-            this.Long_Rodeo = new System.Windows.Forms.Panel();
-            this.Stacker_Cuadruple = new System.Windows.Forms.Panel();
-            this.Long_Queso = new System.Windows.Forms.Panel();
-            this.Atomic_Frances = new System.Windows.Forms.Panel();
-            this.WhopperJr = new System.Windows.Forms.Panel();
-            this.Napolitano = new System.Windows.Forms.Panel();
-            this.Hamburguesa_Queso = new System.Windows.Forms.Panel();
-            this.King_Pollo_Frances = new System.Windows.Forms.Panel();
-            this.Churrasquito_Tradicional = new System.Windows.Forms.Panel();
-            this.King_Pollo = new System.Windows.Forms.Panel();
-            this.Soja_Bio = new System.Windows.Forms.Panel();
-            this.Churrasquito_Pampeano = new System.Windows.Forms.Panel();
-            this.Big_King_Pollo = new System.Windows.Forms.Panel();
-            this.Caja_King = new System.Windows.Forms.Panel();
-            this.Big_King = new System.Windows.Forms.Panel();
-            this.Stacker_Triple = new System.Windows.Forms.Panel();
-            this.Atomic = new System.Windows.Forms.Panel();
-            this.Long_Classic = new System.Windows.Forms.Panel();
-            this.LBLNombre = new System.Windows.Forms.Label();
             this.PNLTodo = new System.Windows.Forms.Panel();
             this.BTNConfirmar = new System.Windows.Forms.Button();
             this.PNLOpciones = new System.Windows.Forms.Panel();
@@ -76,262 +51,37 @@
             this.RBTNPapasCheddar = new System.Windows.Forms.RadioButton();
             this.RBTNNuggets = new System.Windows.Forms.RadioButton();
             this.IMLCombo = new System.Windows.Forms.ImageList(this.components);
-            this.PNLProductosCombos.SuspendLayout();
+            this.LBLNombre = new System.Windows.Forms.Label();
+            this.Long_Classic = new System.Windows.Forms.Panel();
+            this.Atomic = new System.Windows.Forms.Panel();
+            this.Stacker_Triple = new System.Windows.Forms.Panel();
+            this.Big_King = new System.Windows.Forms.Panel();
+            this.Caja_King = new System.Windows.Forms.Panel();
+            this.Big_King_Pollo = new System.Windows.Forms.Panel();
+            this.Churrasquito_Pampeano = new System.Windows.Forms.Panel();
+            this.Soja_Bio = new System.Windows.Forms.Panel();
+            this.King_Pollo = new System.Windows.Forms.Panel();
+            this.Churrasquito_Tradicional = new System.Windows.Forms.Panel();
+            this.King_Pollo_Frances = new System.Windows.Forms.Panel();
+            this.Hamburguesa_Queso = new System.Windows.Forms.Panel();
+            this.Napolitano = new System.Windows.Forms.Panel();
+            this.WhopperJr = new System.Windows.Forms.Panel();
+            this.Atomic_Frances = new System.Windows.Forms.Panel();
+            this.Long_Queso = new System.Windows.Forms.Panel();
+            this.Stacker_Cuadruple = new System.Windows.Forms.Panel();
+            this.Long_Rodeo = new System.Windows.Forms.Panel();
+            this.Long_Clasico = new System.Windows.Forms.Panel();
+            this.Whopper = new System.Windows.Forms.Panel();
+            this.Hamburguesa_Simple = new System.Windows.Forms.Panel();
+            this.Whopper_Extreme = new System.Windows.Forms.Panel();
+            this.Extra_Burguer = new System.Windows.Forms.Panel();
+            this.PNLProductosCombos = new System.Windows.Forms.Panel();
             this.PNLTodo.SuspendLayout();
             this.PNLOpciones.SuspendLayout();
             this.PNLOpciones2.SuspendLayout();
             this.PNLOpciones3.SuspendLayout();
+            this.PNLProductosCombos.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PNLProductosCombos
-            // 
-            this.PNLProductosCombos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PNLProductosCombos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PNLProductosCombos.Controls.Add(this.Extra_Burguer);
-            this.PNLProductosCombos.Controls.Add(this.Whopper_Extreme);
-            this.PNLProductosCombos.Controls.Add(this.Hamburguesa_Simple);
-            this.PNLProductosCombos.Controls.Add(this.Whopper);
-            this.PNLProductosCombos.Controls.Add(this.Long_Clasico);
-            this.PNLProductosCombos.Controls.Add(this.Long_Rodeo);
-            this.PNLProductosCombos.Controls.Add(this.Stacker_Cuadruple);
-            this.PNLProductosCombos.Controls.Add(this.Long_Queso);
-            this.PNLProductosCombos.Controls.Add(this.Atomic_Frances);
-            this.PNLProductosCombos.Controls.Add(this.WhopperJr);
-            this.PNLProductosCombos.Controls.Add(this.Napolitano);
-            this.PNLProductosCombos.Controls.Add(this.Hamburguesa_Queso);
-            this.PNLProductosCombos.Controls.Add(this.King_Pollo_Frances);
-            this.PNLProductosCombos.Controls.Add(this.Churrasquito_Tradicional);
-            this.PNLProductosCombos.Controls.Add(this.King_Pollo);
-            this.PNLProductosCombos.Controls.Add(this.Soja_Bio);
-            this.PNLProductosCombos.Controls.Add(this.Churrasquito_Pampeano);
-            this.PNLProductosCombos.Controls.Add(this.Big_King_Pollo);
-            this.PNLProductosCombos.Controls.Add(this.Caja_King);
-            this.PNLProductosCombos.Controls.Add(this.Big_King);
-            this.PNLProductosCombos.Controls.Add(this.Stacker_Triple);
-            this.PNLProductosCombos.Controls.Add(this.Atomic);
-            this.PNLProductosCombos.Controls.Add(this.Long_Classic);
-            this.PNLProductosCombos.Controls.Add(this.LBLNombre);
-            this.PNLProductosCombos.Location = new System.Drawing.Point(1, 3);
-            this.PNLProductosCombos.Name = "PNLProductosCombos";
-            this.PNLProductosCombos.Size = new System.Drawing.Size(1046, 384);
-            this.PNLProductosCombos.TabIndex = 4;
-            // 
-            // Extra_Burguer
-            // 
-            this.Extra_Burguer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Extra_Burguer.Location = new System.Drawing.Point(137, 220);
-            this.Extra_Burguer.Name = "Extra_Burguer";
-            this.Extra_Burguer.Size = new System.Drawing.Size(100, 100);
-            this.Extra_Burguer.TabIndex = 29;
-            this.Extra_Burguer.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Whopper_Extreme
-            // 
-            this.Whopper_Extreme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Whopper_Extreme.Location = new System.Drawing.Point(769, 220);
-            this.Whopper_Extreme.Name = "Whopper_Extreme";
-            this.Whopper_Extreme.Size = new System.Drawing.Size(100, 100);
-            this.Whopper_Extreme.TabIndex = 31;
-            this.Whopper_Extreme.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Hamburguesa_Simple
-            // 
-            this.Hamburguesa_Simple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Hamburguesa_Simple.Location = new System.Drawing.Point(392, 114);
-            this.Hamburguesa_Simple.Name = "Hamburguesa_Simple";
-            this.Hamburguesa_Simple.Size = new System.Drawing.Size(100, 100);
-            this.Hamburguesa_Simple.TabIndex = 22;
-            this.Hamburguesa_Simple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Whopper
-            // 
-            this.Whopper.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Whopper.Location = new System.Drawing.Point(647, 220);
-            this.Whopper.Name = "Whopper";
-            this.Whopper.Size = new System.Drawing.Size(100, 100);
-            this.Whopper.TabIndex = 33;
-            this.Whopper.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Long_Clasico
-            // 
-            this.Long_Clasico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Long_Clasico.Location = new System.Drawing.Point(17, 220);
-            this.Long_Clasico.Name = "Long_Clasico";
-            this.Long_Clasico.Size = new System.Drawing.Size(100, 100);
-            this.Long_Clasico.TabIndex = 30;
-            this.Long_Clasico.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Long_Rodeo
-            // 
-            this.Long_Rodeo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Long_Rodeo.Location = new System.Drawing.Point(518, 220);
-            this.Long_Rodeo.Name = "Long_Rodeo";
-            this.Long_Rodeo.Size = new System.Drawing.Size(100, 100);
-            this.Long_Rodeo.TabIndex = 35;
-            this.Long_Rodeo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Stacker_Cuadruple
-            // 
-            this.Stacker_Cuadruple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Stacker_Cuadruple.Location = new System.Drawing.Point(647, 8);
-            this.Stacker_Cuadruple.Name = "Stacker_Cuadruple";
-            this.Stacker_Cuadruple.Size = new System.Drawing.Size(100, 100);
-            this.Stacker_Cuadruple.TabIndex = 19;
-            this.Stacker_Cuadruple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Long_Queso
-            // 
-            this.Long_Queso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Long_Queso.Location = new System.Drawing.Point(392, 220);
-            this.Long_Queso.Name = "Long_Queso";
-            this.Long_Queso.Size = new System.Drawing.Size(100, 100);
-            this.Long_Queso.TabIndex = 36;
-            this.Long_Queso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Atomic_Frances
-            // 
-            this.Atomic_Frances.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Atomic_Frances.Location = new System.Drawing.Point(262, 220);
-            this.Atomic_Frances.Name = "Atomic_Frances";
-            this.Atomic_Frances.Size = new System.Drawing.Size(100, 100);
-            this.Atomic_Frances.TabIndex = 28;
-            this.Atomic_Frances.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // WhopperJr
-            // 
-            this.WhopperJr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.WhopperJr.Location = new System.Drawing.Point(897, 114);
-            this.WhopperJr.Name = "WhopperJr";
-            this.WhopperJr.Size = new System.Drawing.Size(100, 100);
-            this.WhopperJr.TabIndex = 32;
-            this.WhopperJr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Napolitano
-            // 
-            this.Napolitano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Napolitano.Location = new System.Drawing.Point(769, 114);
-            this.Napolitano.Name = "Napolitano";
-            this.Napolitano.Size = new System.Drawing.Size(100, 100);
-            this.Napolitano.TabIndex = 34;
-            this.Napolitano.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Hamburguesa_Queso
-            // 
-            this.Hamburguesa_Queso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Hamburguesa_Queso.Location = new System.Drawing.Point(262, 114);
-            this.Hamburguesa_Queso.Name = "Hamburguesa_Queso";
-            this.Hamburguesa_Queso.Size = new System.Drawing.Size(100, 100);
-            this.Hamburguesa_Queso.TabIndex = 23;
-            this.Hamburguesa_Queso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // King_Pollo_Frances
-            // 
-            this.King_Pollo_Frances.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.King_Pollo_Frances.Location = new System.Drawing.Point(647, 114);
-            this.King_Pollo_Frances.Name = "King_Pollo_Frances";
-            this.King_Pollo_Frances.Size = new System.Drawing.Size(100, 100);
-            this.King_Pollo_Frances.TabIndex = 37;
-            this.King_Pollo_Frances.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Churrasquito_Tradicional
-            // 
-            this.Churrasquito_Tradicional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Churrasquito_Tradicional.Location = new System.Drawing.Point(137, 114);
-            this.Churrasquito_Tradicional.Name = "Churrasquito_Tradicional";
-            this.Churrasquito_Tradicional.Size = new System.Drawing.Size(100, 100);
-            this.Churrasquito_Tradicional.TabIndex = 24;
-            this.Churrasquito_Tradicional.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // King_Pollo
-            // 
-            this.King_Pollo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.King_Pollo.Location = new System.Drawing.Point(518, 114);
-            this.King_Pollo.Name = "King_Pollo";
-            this.King_Pollo.Size = new System.Drawing.Size(100, 100);
-            this.King_Pollo.TabIndex = 27;
-            this.King_Pollo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Soja_Bio
-            // 
-            this.Soja_Bio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Soja_Bio.Location = new System.Drawing.Point(518, 8);
-            this.Soja_Bio.Name = "Soja_Bio";
-            this.Soja_Bio.Size = new System.Drawing.Size(100, 100);
-            this.Soja_Bio.TabIndex = 18;
-            this.Soja_Bio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Churrasquito_Pampeano
-            // 
-            this.Churrasquito_Pampeano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Churrasquito_Pampeano.Location = new System.Drawing.Point(17, 114);
-            this.Churrasquito_Pampeano.Name = "Churrasquito_Pampeano";
-            this.Churrasquito_Pampeano.Size = new System.Drawing.Size(100, 100);
-            this.Churrasquito_Pampeano.TabIndex = 25;
-            this.Churrasquito_Pampeano.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Big_King_Pollo
-            // 
-            this.Big_King_Pollo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Big_King_Pollo.Location = new System.Drawing.Point(392, 8);
-            this.Big_King_Pollo.Name = "Big_King_Pollo";
-            this.Big_King_Pollo.Size = new System.Drawing.Size(100, 100);
-            this.Big_King_Pollo.TabIndex = 17;
-            this.Big_King_Pollo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Caja_King
-            // 
-            this.Caja_King.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Caja_King.Location = new System.Drawing.Point(897, 8);
-            this.Caja_King.Name = "Caja_King";
-            this.Caja_King.Size = new System.Drawing.Size(100, 100);
-            this.Caja_King.TabIndex = 26;
-            this.Caja_King.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Big_King
-            // 
-            this.Big_King.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Big_King.Location = new System.Drawing.Point(262, 8);
-            this.Big_King.Name = "Big_King";
-            this.Big_King.Size = new System.Drawing.Size(100, 100);
-            this.Big_King.TabIndex = 16;
-            this.Big_King.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Stacker_Triple
-            // 
-            this.Stacker_Triple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Stacker_Triple.Location = new System.Drawing.Point(769, 8);
-            this.Stacker_Triple.Name = "Stacker_Triple";
-            this.Stacker_Triple.Size = new System.Drawing.Size(100, 100);
-            this.Stacker_Triple.TabIndex = 21;
-            this.Stacker_Triple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Atomic
-            // 
-            this.Atomic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Atomic.Location = new System.Drawing.Point(137, 8);
-            this.Atomic.Name = "Atomic";
-            this.Atomic.Size = new System.Drawing.Size(100, 100);
-            this.Atomic.TabIndex = 20;
-            this.Atomic.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // Long_Classic
-            // 
-            this.Long_Classic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Long_Classic.Location = new System.Drawing.Point(17, 8);
-            this.Long_Classic.Name = "Long_Classic";
-            this.Long_Classic.Size = new System.Drawing.Size(100, 100);
-            this.Long_Classic.TabIndex = 15;
-            this.Long_Classic.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
-            // 
-            // LBLNombre
-            // 
-            this.LBLNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLNombre.Location = new System.Drawing.Point(278, 334);
-            this.LBLNombre.Name = "LBLNombre";
-            this.LBLNombre.Size = new System.Drawing.Size(490, 61);
-            this.LBLNombre.TabIndex = 14;
-            this.LBLNombre.Text = "Seleccione un combo";
             // 
             // PNLTodo
             // 
@@ -356,7 +106,7 @@
             this.BTNConfirmar.FlatAppearance.BorderSize = 0;
             this.BTNConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.BTNConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNConfirmar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNConfirmar.ForeColor = System.Drawing.Color.White;
             this.BTNConfirmar.Location = new System.Drawing.Point(885, 567);
             this.BTNConfirmar.Name = "BTNConfirmar";
@@ -364,6 +114,7 @@
             this.BTNConfirmar.TabIndex = 56;
             this.BTNConfirmar.Text = "Confirmar";
             this.BTNConfirmar.UseVisualStyleBackColor = false;
+            this.BTNConfirmar.Click += new System.EventHandler(this.BTNConfirmar_Click);
             // 
             // PNLOpciones
             // 
@@ -546,7 +297,6 @@
             // 
             this.PNLOpciones3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PNLOpciones3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.PNLOpciones3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PNLOpciones3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PNLOpciones3.Controls.Add(this.LBLPapas);
@@ -639,6 +389,256 @@
             this.IMLCombo.Images.SetKeyName(21, "whopper.png");
             this.IMLCombo.Images.SetKeyName(22, "whopper_extreme-high.png");
             // 
+            // LBLNombre
+            // 
+            this.LBLNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLNombre.Location = new System.Drawing.Point(278, 334);
+            this.LBLNombre.Name = "LBLNombre";
+            this.LBLNombre.Size = new System.Drawing.Size(490, 61);
+            this.LBLNombre.TabIndex = 14;
+            this.LBLNombre.Text = "Seleccione un combo";
+            // 
+            // Long_Classic
+            // 
+            this.Long_Classic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Long_Classic.Location = new System.Drawing.Point(17, 8);
+            this.Long_Classic.Name = "Long_Classic";
+            this.Long_Classic.Size = new System.Drawing.Size(100, 100);
+            this.Long_Classic.TabIndex = 15;
+            this.Long_Classic.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Atomic
+            // 
+            this.Atomic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Atomic.Location = new System.Drawing.Point(137, 8);
+            this.Atomic.Name = "Atomic";
+            this.Atomic.Size = new System.Drawing.Size(100, 100);
+            this.Atomic.TabIndex = 20;
+            this.Atomic.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Stacker_Triple
+            // 
+            this.Stacker_Triple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Stacker_Triple.Location = new System.Drawing.Point(769, 8);
+            this.Stacker_Triple.Name = "Stacker_Triple";
+            this.Stacker_Triple.Size = new System.Drawing.Size(100, 100);
+            this.Stacker_Triple.TabIndex = 21;
+            this.Stacker_Triple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Big_King
+            // 
+            this.Big_King.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Big_King.Location = new System.Drawing.Point(262, 8);
+            this.Big_King.Name = "Big_King";
+            this.Big_King.Size = new System.Drawing.Size(100, 100);
+            this.Big_King.TabIndex = 16;
+            this.Big_King.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Caja_King
+            // 
+            this.Caja_King.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Caja_King.Location = new System.Drawing.Point(897, 8);
+            this.Caja_King.Name = "Caja_King";
+            this.Caja_King.Size = new System.Drawing.Size(100, 100);
+            this.Caja_King.TabIndex = 26;
+            this.Caja_King.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Big_King_Pollo
+            // 
+            this.Big_King_Pollo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Big_King_Pollo.Location = new System.Drawing.Point(392, 8);
+            this.Big_King_Pollo.Name = "Big_King_Pollo";
+            this.Big_King_Pollo.Size = new System.Drawing.Size(100, 100);
+            this.Big_King_Pollo.TabIndex = 17;
+            this.Big_King_Pollo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Churrasquito_Pampeano
+            // 
+            this.Churrasquito_Pampeano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Churrasquito_Pampeano.Location = new System.Drawing.Point(17, 114);
+            this.Churrasquito_Pampeano.Name = "Churrasquito_Pampeano";
+            this.Churrasquito_Pampeano.Size = new System.Drawing.Size(100, 100);
+            this.Churrasquito_Pampeano.TabIndex = 25;
+            this.Churrasquito_Pampeano.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Soja_Bio
+            // 
+            this.Soja_Bio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Soja_Bio.Location = new System.Drawing.Point(518, 8);
+            this.Soja_Bio.Name = "Soja_Bio";
+            this.Soja_Bio.Size = new System.Drawing.Size(100, 100);
+            this.Soja_Bio.TabIndex = 18;
+            this.Soja_Bio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // King_Pollo
+            // 
+            this.King_Pollo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.King_Pollo.Location = new System.Drawing.Point(518, 114);
+            this.King_Pollo.Name = "King_Pollo";
+            this.King_Pollo.Size = new System.Drawing.Size(100, 100);
+            this.King_Pollo.TabIndex = 27;
+            this.King_Pollo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Churrasquito_Tradicional
+            // 
+            this.Churrasquito_Tradicional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Churrasquito_Tradicional.Location = new System.Drawing.Point(137, 114);
+            this.Churrasquito_Tradicional.Name = "Churrasquito_Tradicional";
+            this.Churrasquito_Tradicional.Size = new System.Drawing.Size(100, 100);
+            this.Churrasquito_Tradicional.TabIndex = 24;
+            this.Churrasquito_Tradicional.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // King_Pollo_Frances
+            // 
+            this.King_Pollo_Frances.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.King_Pollo_Frances.Location = new System.Drawing.Point(647, 114);
+            this.King_Pollo_Frances.Name = "King_Pollo_Frances";
+            this.King_Pollo_Frances.Size = new System.Drawing.Size(100, 100);
+            this.King_Pollo_Frances.TabIndex = 37;
+            this.King_Pollo_Frances.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Hamburguesa_Queso
+            // 
+            this.Hamburguesa_Queso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Hamburguesa_Queso.Location = new System.Drawing.Point(262, 114);
+            this.Hamburguesa_Queso.Name = "Hamburguesa_Queso";
+            this.Hamburguesa_Queso.Size = new System.Drawing.Size(100, 100);
+            this.Hamburguesa_Queso.TabIndex = 23;
+            this.Hamburguesa_Queso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Napolitano
+            // 
+            this.Napolitano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Napolitano.Location = new System.Drawing.Point(769, 114);
+            this.Napolitano.Name = "Napolitano";
+            this.Napolitano.Size = new System.Drawing.Size(100, 100);
+            this.Napolitano.TabIndex = 34;
+            this.Napolitano.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // WhopperJr
+            // 
+            this.WhopperJr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.WhopperJr.Location = new System.Drawing.Point(897, 114);
+            this.WhopperJr.Name = "WhopperJr";
+            this.WhopperJr.Size = new System.Drawing.Size(100, 100);
+            this.WhopperJr.TabIndex = 32;
+            this.WhopperJr.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Atomic_Frances
+            // 
+            this.Atomic_Frances.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Atomic_Frances.Location = new System.Drawing.Point(262, 220);
+            this.Atomic_Frances.Name = "Atomic_Frances";
+            this.Atomic_Frances.Size = new System.Drawing.Size(100, 100);
+            this.Atomic_Frances.TabIndex = 28;
+            this.Atomic_Frances.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Long_Queso
+            // 
+            this.Long_Queso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Long_Queso.Location = new System.Drawing.Point(392, 220);
+            this.Long_Queso.Name = "Long_Queso";
+            this.Long_Queso.Size = new System.Drawing.Size(100, 100);
+            this.Long_Queso.TabIndex = 36;
+            this.Long_Queso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Stacker_Cuadruple
+            // 
+            this.Stacker_Cuadruple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Stacker_Cuadruple.Location = new System.Drawing.Point(647, 8);
+            this.Stacker_Cuadruple.Name = "Stacker_Cuadruple";
+            this.Stacker_Cuadruple.Size = new System.Drawing.Size(100, 100);
+            this.Stacker_Cuadruple.TabIndex = 19;
+            this.Stacker_Cuadruple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Long_Rodeo
+            // 
+            this.Long_Rodeo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Long_Rodeo.Location = new System.Drawing.Point(518, 220);
+            this.Long_Rodeo.Name = "Long_Rodeo";
+            this.Long_Rodeo.Size = new System.Drawing.Size(100, 100);
+            this.Long_Rodeo.TabIndex = 35;
+            this.Long_Rodeo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Long_Clasico
+            // 
+            this.Long_Clasico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Long_Clasico.Location = new System.Drawing.Point(17, 220);
+            this.Long_Clasico.Name = "Long_Clasico";
+            this.Long_Clasico.Size = new System.Drawing.Size(100, 100);
+            this.Long_Clasico.TabIndex = 30;
+            this.Long_Clasico.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Whopper
+            // 
+            this.Whopper.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Whopper.Location = new System.Drawing.Point(647, 220);
+            this.Whopper.Name = "Whopper";
+            this.Whopper.Size = new System.Drawing.Size(100, 100);
+            this.Whopper.TabIndex = 33;
+            this.Whopper.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Hamburguesa_Simple
+            // 
+            this.Hamburguesa_Simple.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Hamburguesa_Simple.Location = new System.Drawing.Point(392, 114);
+            this.Hamburguesa_Simple.Name = "Hamburguesa_Simple";
+            this.Hamburguesa_Simple.Size = new System.Drawing.Size(100, 100);
+            this.Hamburguesa_Simple.TabIndex = 22;
+            this.Hamburguesa_Simple.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Whopper_Extreme
+            // 
+            this.Whopper_Extreme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Whopper_Extreme.Location = new System.Drawing.Point(769, 220);
+            this.Whopper_Extreme.Name = "Whopper_Extreme";
+            this.Whopper_Extreme.Size = new System.Drawing.Size(100, 100);
+            this.Whopper_Extreme.TabIndex = 31;
+            this.Whopper_Extreme.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // Extra_Burguer
+            // 
+            this.Extra_Burguer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Extra_Burguer.Location = new System.Drawing.Point(137, 220);
+            this.Extra_Burguer.Name = "Extra_Burguer";
+            this.Extra_Burguer.Size = new System.Drawing.Size(100, 100);
+            this.Extra_Burguer.TabIndex = 29;
+            this.Extra_Burguer.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PNLImagen1_MouseClick);
+            // 
+            // PNLProductosCombos
+            // 
+            this.PNLProductosCombos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PNLProductosCombos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PNLProductosCombos.Controls.Add(this.Extra_Burguer);
+            this.PNLProductosCombos.Controls.Add(this.Whopper_Extreme);
+            this.PNLProductosCombos.Controls.Add(this.Hamburguesa_Simple);
+            this.PNLProductosCombos.Controls.Add(this.Whopper);
+            this.PNLProductosCombos.Controls.Add(this.Long_Clasico);
+            this.PNLProductosCombos.Controls.Add(this.Long_Rodeo);
+            this.PNLProductosCombos.Controls.Add(this.Stacker_Cuadruple);
+            this.PNLProductosCombos.Controls.Add(this.Long_Queso);
+            this.PNLProductosCombos.Controls.Add(this.Atomic_Frances);
+            this.PNLProductosCombos.Controls.Add(this.WhopperJr);
+            this.PNLProductosCombos.Controls.Add(this.Napolitano);
+            this.PNLProductosCombos.Controls.Add(this.Hamburguesa_Queso);
+            this.PNLProductosCombos.Controls.Add(this.King_Pollo_Frances);
+            this.PNLProductosCombos.Controls.Add(this.Churrasquito_Tradicional);
+            this.PNLProductosCombos.Controls.Add(this.King_Pollo);
+            this.PNLProductosCombos.Controls.Add(this.Soja_Bio);
+            this.PNLProductosCombos.Controls.Add(this.Churrasquito_Pampeano);
+            this.PNLProductosCombos.Controls.Add(this.Big_King_Pollo);
+            this.PNLProductosCombos.Controls.Add(this.Caja_King);
+            this.PNLProductosCombos.Controls.Add(this.Big_King);
+            this.PNLProductosCombos.Controls.Add(this.Stacker_Triple);
+            this.PNLProductosCombos.Controls.Add(this.Atomic);
+            this.PNLProductosCombos.Controls.Add(this.Long_Classic);
+            this.PNLProductosCombos.Controls.Add(this.LBLNombre);
+            this.PNLProductosCombos.Location = new System.Drawing.Point(1, 3);
+            this.PNLProductosCombos.Name = "PNLProductosCombos";
+            this.PNLProductosCombos.Size = new System.Drawing.Size(1046, 384);
+            this.PNLProductosCombos.TabIndex = 4;
+            // 
             // FormCombos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -648,7 +648,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCombos";
             this.Text = "FormCombos";
-            this.PNLProductosCombos.ResumeLayout(false);
             this.PNLTodo.ResumeLayout(false);
             this.PNLOpciones.ResumeLayout(false);
             this.PNLOpciones.PerformLayout();
@@ -656,16 +655,14 @@
             this.PNLOpciones2.PerformLayout();
             this.PNLOpciones3.ResumeLayout(false);
             this.PNLOpciones3.PerformLayout();
+            this.PNLProductosCombos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel PNLProductosCombos;
         private System.Windows.Forms.Panel PNLTodo;
         private System.Windows.Forms.ImageList IMLCombo;
-        private System.Windows.Forms.Label LBLNombre;
         private System.Windows.Forms.Panel PNLOpciones;
         private System.Windows.Forms.Label LBLTamaño;
         private System.Windows.Forms.RadioButton RBTNGrande;
@@ -684,6 +681,8 @@
         private System.Windows.Forms.RadioButton RBTNPapasClasicas;
         private System.Windows.Forms.RadioButton RBTNPapasCheddar;
         private System.Windows.Forms.RadioButton RBTNNuggets;
+        private System.Windows.Forms.Button BTNConfirmar;
+        private System.Windows.Forms.Panel PNLProductosCombos;
         private System.Windows.Forms.Panel Extra_Burguer;
         private System.Windows.Forms.Panel Whopper_Extreme;
         private System.Windows.Forms.Panel Hamburguesa_Simple;
@@ -707,6 +706,6 @@
         private System.Windows.Forms.Panel Stacker_Triple;
         private System.Windows.Forms.Panel Atomic;
         private System.Windows.Forms.Panel Long_Classic;
-        private System.Windows.Forms.Button BTNConfirmar;
+        private System.Windows.Forms.Label LBLNombre;
     }
 }

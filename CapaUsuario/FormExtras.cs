@@ -12,7 +12,7 @@ namespace CapaUsuario
 {
     public partial class FormExtras : Form
     {
-        double totaal=0;
+        public static double totaal =0;
         public FormExtras()
         {
             InitializeComponent();
@@ -74,8 +74,8 @@ namespace CapaUsuario
                             Detalle a = new Detalle();
                             a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), Tamano.BuscarPorNombre(tam).IdTamano, Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name).Precio, Tamano.BuscarPorNombre(tam).Precio));
                             a.Guardar();
-                            totaal = a.Precio1;
-
+                            totaal += a.Precio1;
+                            Program.a.ActualizarDGV();
                         }
                     }
                 }

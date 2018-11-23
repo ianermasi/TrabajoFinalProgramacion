@@ -12,7 +12,7 @@ namespace CapaUsuario
 {
     public partial class FormBebidas : Form
     {
-        public double totaal;
+        public static double totaal;
         public FormBebidas()
         {
             InitializeComponent();
@@ -53,6 +53,7 @@ namespace CapaUsuario
         private void BTNConfirmar_Click(object sender, EventArgs e)
         {
             string tam="";
+
             foreach(object x in PNLOpciones.Controls)
             {
                 if(x is RadioButton)
@@ -61,7 +62,8 @@ namespace CapaUsuario
                     tam = (x as RadioButton).Name;
                 }
             }
-            if(tam != "")
+            
+            if (tam != "")
             { 
              foreach (object x in PNLContenedor.Controls)
              {
@@ -72,8 +74,8 @@ namespace CapaUsuario
                               Detalle a = new Detalle();
                             a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), Tamano.BuscarPorNombre(tam).IdTamano, Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name).Precio, Tamano.BuscarPorNombre(tam).Precio));
                              a.Guardar();
-                            totaal = a.Precio1;
-                            
+                            totaal += a.Precio1;
+                            Program.a.ActualizarDGV();
                         }
             }
            }

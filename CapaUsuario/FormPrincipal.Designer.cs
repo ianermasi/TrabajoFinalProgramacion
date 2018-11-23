@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.PNLContenedor = new System.Windows.Forms.Panel();
             this.PNLEfectivo = new System.Windows.Forms.Panel();
@@ -64,6 +65,7 @@
             this.PBXCerrar = new System.Windows.Forms.PictureBox();
             this.PBXMinimizar = new System.Windows.Forms.PictureBox();
             this.PNLTop = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.PNLContenedor.SuspendLayout();
             this.PNLEfectivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDRecibido)).BeginInit();
@@ -539,6 +541,9 @@
             this.PNLTop.Size = new System.Drawing.Size(1350, 35);
             this.PNLTop.TabIndex = 7;
             // 
+            // timer2
+            // 
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,5 +612,6 @@
         private System.Windows.Forms.NumericUpDown NUDRecibido;
         private System.Windows.Forms.Label LBLRecibido;
         private System.Windows.Forms.Panel PNLLineaEfectivo;
+        private System.Windows.Forms.Timer timer2;
     }
 }

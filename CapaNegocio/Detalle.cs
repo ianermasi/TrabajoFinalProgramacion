@@ -139,6 +139,20 @@ namespace CapaNegocio
             dtc.SubmitChanges();
 
         }
+
+        public static List<Detalle> ListaDetalles(int idpedido)
+        {
+                List<Detalle> aux = new List<Detalle>();
+                dataDataContext dtc = new dataDataContext(Conexion.DarStringConexion());
+                var cons = from x in dtc.EDetalle
+                           where x.fkPedido == idpedido
+                           select x;
+                foreach (EDetalle x in cons)
+                {
+                    aux.Add(new Detalle((int)x.fkPedido, (int)x.fkProducto,x.Observaciones, (int)x.fkTamano, (double)x.Precio));
+                }
+                return aux;
+        }
         #endregion
     }
 }

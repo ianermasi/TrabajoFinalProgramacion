@@ -13,7 +13,7 @@ namespace CapaUsuario
 {
     public partial class FormHamburguesas : Form
     {
-        double totaal=0;
+        public static double totaal =0;
         public FormHamburguesas()
         {
             InitializeComponent();
@@ -81,9 +81,9 @@ namespace CapaUsuario
                             Detalle a = new Detalle();
                             a = new Detalle(Pedido.ObtenerPedido().IdPedido, Producto.BuscarPorNombre((x as Panel).Name).IdProducto, FormPrincipal.ObtenerObservaciones(), 0 , Pedido.calcularTotal(Producto.BuscarPorNombre((x as Panel).Name).Precio, Tamano.BuscarPorNombre("nada").Precio));
                             a.Guardar();
-                            totaal = a.Precio1;
-
-                        }
+                            totaal += a.Precio1;
+                        Program.a.ActualizarDGV();
+                    }
                     }
                 }
             

@@ -6,15 +6,14 @@ using System.Windows.Forms;
 
 namespace CapaUsuario
 {
-    static class Program
+    public class Program 
     {
-
-        [STAThread]
-        static void Main()
+        public static FormPrincipal a;
+        FormPrincipal b;
+        public static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+             a = new FormPrincipal();
+            Application.Run(a);
         }
     }
 }

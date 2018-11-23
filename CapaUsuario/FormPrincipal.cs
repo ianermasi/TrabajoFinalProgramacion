@@ -20,11 +20,11 @@ namespace CapaUsuario
             PNLCuotas.Visible = false;
             PNLEfectivo.Visible = false;
             Pedido p = new Pedido(0,DateTime.Today);
-            //p.Guardar();
+            p.Guardar();
             ActualizarDGV();
 
-
         }
+        
 
         private void PBXCerrar_Click(object sender, EventArgs e)
         {
@@ -55,7 +55,9 @@ namespace CapaUsuario
 
         private void BTNBebidas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormBebidas());
+            
+            FormBebidas a = new FormBebidas();
+            AbrirFormulario(a);
         }
 
         private void BTNHamburguesas_Click(object sender, EventArgs e)
@@ -125,10 +127,12 @@ namespace CapaUsuario
             TXTObservaciones.Text = "";
         }
 
-        private void ActualizarDGV()
+        public void ActualizarDGV()
         {
             DGVPedido.DataSource = null;
-            DGVPedido.DataSource = Detalle.ListaDetalles().ToString();
+            DGVPedido.DataSource = Detalle.ListaDetalles(Pedido.ObtenerPedido().IdPedido).ToList();
+            LBLTotal.Text = (FormBebidas.totaal + FormExtras.totaal + FormHamburguesas.totaal + FormPostres.totaal).ToString(); ;
         }
+
     }
 }
