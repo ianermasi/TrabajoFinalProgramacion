@@ -140,6 +140,7 @@
             this.button1.TabIndex = 56;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // PNLLineaEfectivo
             // 
@@ -372,18 +373,18 @@
             this.LBLPrecioFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LBLPrecioFinal.AutoSize = true;
             this.LBLPrecioFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLPrecioFinal.Location = new System.Drawing.Point(1258, 573);
+            this.LBLPrecioFinal.Location = new System.Drawing.Point(1182, 573);
             this.LBLPrecioFinal.Name = "LBLPrecioFinal";
-            this.LBLPrecioFinal.Size = new System.Drawing.Size(48, 25);
+            this.LBLPrecioFinal.Size = new System.Drawing.Size(86, 25);
             this.LBLPrecioFinal.TabIndex = 5;
-            this.LBLPrecioFinal.Text = "000";
+            this.LBLPrecioFinal.Text = "TOTAL:";
             // 
             // LBLTotal
             // 
             this.LBLTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LBLTotal.AutoSize = true;
             this.LBLTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLTotal.Location = new System.Drawing.Point(1182, 573);
+            this.LBLTotal.Location = new System.Drawing.Point(1264, 573);
             this.LBLTotal.Name = "LBLTotal";
             this.LBLTotal.Size = new System.Drawing.Size(86, 25);
             this.LBLTotal.TabIndex = 4;
@@ -435,10 +436,13 @@
             this.DGVPedido.AllowUserToDeleteRows = false;
             this.DGVPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DGVPedido.BackgroundColor = System.Drawing.Color.White;
+            this.DGVPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVPedido.Location = new System.Drawing.Point(898, 127);
             this.DGVPedido.Name = "DGVPedido";
             this.DGVPedido.ReadOnly = true;
+            this.DGVPedido.RowHeadersVisible = false;
             this.DGVPedido.Size = new System.Drawing.Size(440, 220);
             this.DGVPedido.TabIndex = 2;
             // 

@@ -64,7 +64,7 @@ namespace CapaNegocio
             this.FkTamano = 0;
         }
 
-      
+
 
 
 

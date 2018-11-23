@@ -43,6 +43,20 @@ namespace CapaNegocio
             }
         }
 
+        internal static Tamano BuscarPorId(int fkTamano)
+        {
+            Tamano resultado = new Tamano();
+            dataDataContext dtc = new dataDataContext(Conexion.DarStringConexion());
+            var cons = from x in dtc.ETamano
+                       where x.idTamano == fkTamano
+                       select x;
+            foreach (ETamano x in cons)
+            {
+                resultado = new Tamano(x.idTamano, x.nombre, (double)x.precio);
+            }
+            return resultado;
+        }
+
         public double Precio
         {
             get

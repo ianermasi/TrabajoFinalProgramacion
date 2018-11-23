@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CapaDato;
 namespace CapaNegocio
 {
     public class Tipo
@@ -55,7 +55,19 @@ namespace CapaNegocio
         #endregion
 
         #region Constructor
-
+        public static Tipo BuscarPorId(int buscado)
+        {
+            Tipo resultado = new Tipo();
+            dataDataContext dtc = new dataDataContext(Conexion.DarStringConexion());
+            var cons = from x in dtc.ETipo
+                       where x.idTipo.Equals(buscado)
+                       select x;
+            foreach (ETipo x in cons)
+            {
+                resultado = new Tipo(x.idTipo, x.nombre);
+            }
+            return resultado;
+        }
         #endregion
 
     }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDato;
+using System.ComponentModel;
+
 namespace CapaNegocio
 {
     public class Detalle
@@ -18,6 +20,16 @@ namespace CapaNegocio
         #endregion
 
         #region Propiedades
+        [DisplayName("Producto")]
+        public Producto Productos
+        {
+            get { return Producto.BuscarPorId(FkProducto); }
+        }
+        public string Tamaño
+        {
+            get { return Tamano.BuscarPorId(FkTamano).Nombre; }
+        }
+        [Browsable(false)]
         public int IdDetalle
         {
             get
@@ -44,6 +56,7 @@ namespace CapaNegocio
             }
         }
 
+       [Browsable(false)]
         public int FkProducto
         {
             get
@@ -82,7 +95,7 @@ namespace CapaNegocio
                 fkTamano = value;
             }
         }
-
+        [DisplayName("Precio")]
         public double Precio1
         {
             get
@@ -137,7 +150,6 @@ namespace CapaNegocio
             d.Precio = (decimal)this.Precio;
             dtc.EDetalle.InsertOnSubmit(d);
             dtc.SubmitChanges();
-
         }
 
         public static List<Detalle> ListaDetalles(int idpedido)
