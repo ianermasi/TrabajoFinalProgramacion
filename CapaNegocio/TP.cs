@@ -12,22 +12,59 @@ namespace CapaNegocio
         int fkTipo;
         int fkTamano;
 
+        public int IdPT
+        {
+            get
+            {
+                return idPT;
+            }
+
+            set
+            {
+                idPT = value;
+            }
+        }
+
+        public int FkTipo
+        {
+            get
+            {
+                return fkTipo;
+            }
+
+            set
+            {
+                fkTipo = value;
+            }
+        }
+
+        public int FkTamano
+        {
+            get
+            {
+                return fkTamano;
+            }
+
+            set
+            {
+                fkTamano = value;
+            }
+        }
+
         public TP(int idPT, int fkTipo, int fkTamano)
         {
-            this.idPT = idPT;
-            this.fkTipo = fkTipo;
-            this.fkTamano = fkTamano;
+            this.IdPT = idPT;
+            this.FkTipo = fkTipo;
+            this.FkTamano = fkTamano;
         }
         public TP()
         {
-            this.idPT = 0;
-            this.fkTipo = 0;
-            this.fkTamano = 0;
+            this.IdPT = 0;
+            this.FkTipo = 0;
+            this.FkTamano = 0;
         }
 
-        public int IdPT { get => idPT; set => idPT = value; }
-        public int FkTipo { get => fkTipo; set => fkTipo = value; }
-        public int FkTamano { get => fkTamano; set => fkTamano = value; }
+
 
 
 

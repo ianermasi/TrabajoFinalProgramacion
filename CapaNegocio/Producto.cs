@@ -88,6 +88,11 @@ namespace CapaNegocio
         #endregion
 
         #region Meto2
+        public override string ToString()
+        {
+            return String.Concat(/*idProducto, " ", */nombre/*, " ", precio, " ", Tipo.BuscarPorId(fkTipo).Nombre*/);
+        }
+
         public static Producto BuscarPorNombre(string buscado)
         {
             Producto resultado = new Producto();
@@ -115,6 +120,21 @@ namespace CapaNegocio
             resultado = new TP(cons.First().idPT, (int)cons.First().fkTipo, (int)cons.First().fkTamano);
             return resultado;
         }
+
+        public static Producto BuscarPorId(int buscado)
+        {
+            Producto resultado = new Producto();
+            dataDataContext dtc = new dataDataContext(Conexion.DarStringConexion());
+            var cons = from x in dtc.EProducto
+                       where x.idProducto.Equals(buscado)
+                       select x;
+            foreach (EProducto x in cons)
+            {
+                resultado = new Producto(x.idProducto, x.nombre, (double)x.precio, (int)x.fkTipo);
+            }
+            return resultado;
+        }
+
         #endregion
     }
 }

@@ -134,7 +134,12 @@ namespace CapaUsuario
         {
             DGVPedido.DataSource = null;
             DGVPedido.DataSource = Detalle.ListaDetalles(Pedido.ObtenerPedido().IdPedido).ToList();
-            LBLTotal.Text = (FormBebidas.totaal + FormExtras.totaal + FormHamburguesas.totaal + FormPostres.totaal).ToString(); ;
+            this.DGVPedido.Columns["Precio1"].DefaultCellStyle.Format = "$0";
+            this.DGVPedido.Columns["Observaciones1"].HeaderText = "Observaciones";
+            this.DGVPedido.Columns["FkPedido"].Visible = false;
+            this.DGVPedido.Columns["FkTamano"].Visible = false;
+
+            LBLTotal.Text = (FormBebidas.totaal + FormExtras.totaal + FormHamburguesas.totaal + FormPostres.totaal + FormCombos.totaal).ToString(); ;
         }
 
         private void NUDRecibido_Leave(object sender, EventArgs e)
@@ -142,12 +147,8 @@ namespace CapaUsuario
             double resultado=0;
             try
             {
-                if(Int32.Parse(LBLTotal.Text)*1 == 0)
                 resultado = (double)NUDRecibido.Value - Int32.Parse(LBLTotal.Text);
-                else
-                {
-                    MessageBox.Show("Por favor seleccione un producto");
-                }
+                
             }
             catch(Exception ex)
             {
@@ -168,6 +169,24 @@ namespace CapaUsuario
             Pedido a = new Pedido(0, DateTime.Today);
             a.Guardar();
             ActualizarDGV();
+            PNLEfectivo.Visible = false;
+            PNLCuotas.Visible = false;
+            RBTNEfectivo.Checked = false;
+            RBTNTarjeta.Checked = false;
+            NUDRecibido.Value = 0;
+            RBTNUnPago.Checked = false;
+            RBTN3Cuotas.Checked = false;
+            RBTN6Cuotas.Checked = false;
+            RBTN12Cuotas.Checked = false;
+            TXTObservaciones.Text = "";
+            DGVPedido.DataSource = null;
+            LBLTotal.Text = "000";
+            LBLDevolverNumero.Text = "000";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
