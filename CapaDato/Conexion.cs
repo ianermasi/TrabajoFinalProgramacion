@@ -8,7 +8,7 @@ namespace CapaDato
 {
     public class Conexion
     {
-        private static string server = @"192.168.1.100";
+        private static string server = @"192.168.1.103";
         private static string db = @"ProgramacionFinal";
         private static string usuario = @"sa";
         private static string clave = @"123";

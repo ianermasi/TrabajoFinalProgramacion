@@ -162,5 +162,12 @@ namespace CapaUsuario
                 MessageBox.Show("faltan $" + resultado.ToString().Split('-')[1]);
             }
         }
+
+        private void BTNFinalizar_Click(object sender, EventArgs e)
+        {
+            Pedido a = new Pedido(0, DateTime.Today);
+            a.Guardar();
+            ActualizarDGV();
+        }
     }
 }

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.PNLContenedor = new System.Windows.Forms.Panel();
             this.PNLEfectivo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.PNLLineaEfectivo = new System.Windows.Forms.Panel();
             this.LBLDevolverNumero = new System.Windows.Forms.Label();
             this.LBLDevolver = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.PBXMinimizar = new System.Windows.Forms.PictureBox();
             this.PNLTop = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.PNLContenedor.SuspendLayout();
             this.PNLEfectivo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDRecibido)).BeginInit();
@@ -123,6 +123,23 @@
             this.PNLEfectivo.Name = "PNLEfectivo";
             this.PNLEfectivo.Size = new System.Drawing.Size(438, 170);
             this.PNLEfectivo.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(251, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 30);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Aceptar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // PNLLineaEfectivo
             // 
@@ -336,6 +353,7 @@
             this.BTNFinalizar.TabIndex = 45;
             this.BTNFinalizar.Text = "Finalizar";
             this.BTNFinalizar.UseVisualStyleBackColor = false;
+            this.BTNFinalizar.Click += new System.EventHandler(this.BTNFinalizar_Click);
             // 
             // PNLForms
             // 
@@ -548,23 +566,6 @@
             this.PNLTop.Name = "PNLTop";
             this.PNLTop.Size = new System.Drawing.Size(1350, 35);
             this.PNLTop.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(127)))), ((int)(((byte)(26)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(251, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 30);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FormPrincipal
             // 
