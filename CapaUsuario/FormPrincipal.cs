@@ -165,9 +165,12 @@ namespace CapaUsuario
 
         private void BTNFinalizar_Click(object sender, EventArgs e)
         {
-            Pedido a = new Pedido(0, DateTime.Today);
-            a.Guardar();
+            /*Pedido a = new Pedido(0, DateTime.Today);
+            a.Guardar();*/
+            FormReporteTicket frt = new FormReporteTicket();
+            frt.Show();
             ActualizarDGV();
+
         }
     }
 }

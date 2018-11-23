@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSTicket" targetNamespace="http://tempuri.org/DSTicket.xsd" xmlns:mstns="http://tempuri.org/DSTicket.xsd" xmlns="http://tempuri.org/DSTicket.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=172.16.5.30;Initial Catalog=ProgramacionFinal;User ID=Nanu;Password=123456" IsAppSettingsProperty="false" Modifier="Assembly" Name="pc06-pc\pc06.ProgramacionFinal.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DTTicketTableAdapter" GeneratorDataComponentClassName="DTTicketTableAdapter" Name="DTTicket" UserDataComponentName="DTTicketTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="pc06-pc\pc06.ProgramacionFinal.dbo" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        d.idDetalle AS Nro, pr.nombre AS Producto, t.nombre AS Tamaño, d.Precio, pe.fecha AS Fecha, pe.total AS Total
+FROM            Detalle AS d INNER JOIN
+                         Pedido AS pe ON d.fkPedido = pe.idPedido INNER JOIN
+                         Producto AS pr ON d.fkProducto = pr.idProducto INNER JOIN
+                         Tamano AS t ON d.fkTamano = t.idTamano</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nro" DataSetColumn="Nro" />
+              <Mapping SourceColumn="Producto" DataSetColumn="Producto" />
+              <Mapping SourceColumn="Tamaño" DataSetColumn="Tamaño" />
+              <Mapping SourceColumn="Precio" DataSetColumn="Precio" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSTicket" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSTicket" msprop:Generator_UserDSName="DSTicket">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTTicket" msprop:Generator_TableClassName="DTTicketDataTable" msprop:Generator_TableVarName="tableDTTicket" msprop:Generator_TablePropName="DTTicket" msprop:Generator_RowDeletingName="DTTicketRowDeleting" msprop:Generator_RowChangingName="DTTicketRowChanging" msprop:Generator_RowEvHandlerName="DTTicketRowChangeEventHandler" msprop:Generator_RowDeletedName="DTTicketRowDeleted" msprop:Generator_UserTableName="DTTicket" msprop:Generator_RowChangedName="DTTicketRowChanged" msprop:Generator_RowEvArgName="DTTicketRowChangeEvent" msprop:Generator_RowClassName="DTTicketRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nro" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNro" msprop:Generator_ColumnPropNameInRow="Nro" msprop:Generator_ColumnPropNameInTable="NroColumn" msprop:Generator_UserColumnName="Nro" type="xs:int" />
+              <xs:element name="Producto" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" msprop:Generator_UserColumnName="Producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tamaño" msprop:Generator_ColumnVarNameInTable="columnTamaño" msprop:Generator_ColumnPropNameInRow="Tamaño" msprop:Generator_ColumnPropNameInTable="TamañoColumn" msprop:Generator_UserColumnName="Tamaño" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DTTicket" />
+      <xs:field xpath="mstns:Nro" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
